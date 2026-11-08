@@ -1,0 +1,40 @@
+name: Daily brief
+
+on:
+  schedule:
+    # 19:40 UTC = 6:40am AEDT (5:40am AEST in winter). GitHub may start it a few minutes late.
+    - cron: "40 19 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Research and write the brief
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SW_MODEL: ${{ vars.SW_MODEL }}
+          SW_EFFORT: ${{ vars.SW_EFFORT }}
+        run: python generate.py
+      - name: Publish
+        run: |
+          git config user.name "southern-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Brief for $(TZ=Australia/Sydney date +%F)"
+          git push

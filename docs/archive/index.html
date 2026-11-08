@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Southern Watch Archive</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#f3f5f6; --surface:#ffffff; --fg:#17212b; --muted:#5b6873; --rule:#d5dce1;
+  --accent:#0d5c63; --accent-soft:#e1efef; --red:#9b2c2c; --red-soft:#f6e6e4;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Source Serif 4",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#10171d; --surface:#172129; --fg:#e3e9ed; --muted:#93a1ab; --rule:#2b3843;
+  --accent:#5fbcc3; --accent-soft:#163338; --red:#e58a80; --red-soft:#3a2120; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:46rem;margin:0 auto;padding-block:2rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+nav{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-family:var(--mono);font-size:.75rem;margin-bottom:1.2rem}
+header{display:grid;gap:.4rem;border-bottom:3px solid var(--fg);padding-bottom:1rem;margin-bottom:1.5rem}
+.dtg{font-family:var(--mono);font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,7vw,3.2rem);line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em}
+.sub{color:var(--muted);margin:0;font-size:.95rem}
+h2{font-family:var(--display);text-wrap:balance;margin:0}
+.label{font-family:var(--display);font-weight:600;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.bluf{background:var(--surface);border:1px solid var(--rule);padding:1.1rem 1.25rem;display:grid;gap:.6rem;margin-bottom:2rem}
+.bluf ol{margin:0;padding-left:1.2rem;display:grid;gap:.45rem}
+.story{display:grid;gap:.8rem;padding-block:1.6rem;border-top:1px solid var(--rule)}
+.story h2{font-size:1.75rem;font-weight:600;line-height:1.1}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.tag{font-family:var(--mono);font-size:.72rem;padding:.15rem .5rem;border:1px solid var(--rule);color:var(--muted)}
+.tag.hi{border-color:var(--red);color:var(--red)}
+.story p{margin:0}
+.block{display:grid;gap:.35rem}
+.block ul{margin:0;padding-left:1.1rem;display:grid;gap:.35rem}
+.lens{background:var(--red-soft);padding:.8rem 1rem;display:grid;gap:.3rem}
+.lens .label{color:var(--red)}
+.angle{background:var(--accent-soft);padding:.8rem 1rem;display:grid;gap:.3rem}
+.src{font-family:var(--mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.3rem .9rem}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tablewrap{overflow-x:auto}
+.cal{width:100%;border-collapse:collapse;font-size:.95rem}
+.cal td{padding:.45rem .4rem;border-bottom:1px solid var(--rule);vertical-align:top}
+.cal td:first-child{font-family:var(--mono);font-size:.8rem;white-space:nowrap;color:var(--accent);font-variant-numeric:tabular-nums}
+.note{font-size:.88rem;color:var(--muted)}
+.archive{list-style:none;margin:0;padding:0;display:grid}
+.archive li{display:grid;gap:.2rem;padding-block:.9rem;border-top:1px solid var(--rule)}
+.archive a{font-family:var(--display);font-size:1.3rem;font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="../index.html">Latest</a></nav><header><span class="dtg">ALL BRIEFS</span><h1>Archive</h1></header><ul class="archive"><li><a href="2026-11-08.html">Sunday 8 November 2026</a><span class="note">The PLA has two carriers and 100+ naval and coast guard vessels at sea east of Taiwan in an <strong>unnamed, unannounced</strong> three-theatre operation. Beijing not naming it is the signal to watch.</span></li></ul>
+</div>
+</body>
+</html>
