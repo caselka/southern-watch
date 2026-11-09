@@ -58,7 +58,7 @@ git push -q
 echo "=== published $(date)"
 if command -v notify >/dev/null; then
   BLUF=$(python3 -c "import json,re;b=json.load(open('$OUT'));print(re.sub(r'\*\*','',b['bluf'][0]))")
-  curl -fsS -H "Title: Southern Watch $DATE${LABEL:+ · $LABEL}" -H "Tags: newspaper" \
+  curl -fsS -H "Title: Southern Watch $DATE${LABEL:+ - $LABEL}" -H "Tags: newspaper" \
     -H "Click: https://caselka.github.io/southern-watch/" \
     -d "$BLUF" "https://ntfy.sh/$(cat /etc/ntfy-topic)" >/dev/null || true
 fi
