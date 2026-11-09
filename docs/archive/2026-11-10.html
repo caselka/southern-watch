@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f1b2d">
+<title>Southern Watch · 10 Nov 2026</title>
+<link rel="icon" href="../assets/icon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+
+<style>
+/* Navy masthead with the logo, then a plain document: white page, black Times New Roman, double-spaced */
+:root{--navy:#0f1b2d;--gold:#f5b81c;--cream:#f3eee6;--lens:#8b0000;color-scheme:light}
+*{box-sizing:border-box}
+html,body{background:#ffffff;color:#000000}
+body{margin:0;font-family:"Times New Roman",Times,serif;font-size:18px;line-height:2}
+a{color:#000000;text-decoration:underline}
+a:focus-visible{outline:2px solid #000;outline-offset:2px}
+.mast{background:var(--navy);color:var(--cream)}
+.mast-in{max-width:44rem;margin:0 auto;padding-block:1.25rem 1.25rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;justify-items:center;gap:.4rem;text-align:center;line-height:1.5}
+.mast img{width:min(220px,60vw);height:auto;display:block}
+.mast nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.2rem 1.4rem;font-size:.95rem}
+.mast nav a{color:var(--cream)}
+.mast nav a:hover{color:var(--gold)}
+.dateline{font-style:italic;font-size:.95rem;color:var(--cream)}
+.views{font-size:.9rem;color:var(--cream);opacity:.85}
+.views[hidden]{display:none}
+.edition{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .5rem;border-radius:2px}
+.wrap{max-width:44rem;margin:0 auto;padding-block:1.5rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
+.label{display:block;font-size:1.05rem;font-weight:bold;font-style:italic;line-height:1.4;margin-top:.6rem}
+.bluf{border-bottom:1px solid #000;padding-bottom:1rem}
+.bluf .label{font-size:1.4rem;font-style:normal;margin-top:0}
+.bluf ol{margin:0;padding-left:1.4rem}
+.story{padding-block:1.5rem;border-bottom:1px solid #000}
+.meta{font-size:.9rem;font-style:italic}
+.tag+.tag::before{content:" · "}
+.tag.hi{font-weight:bold;font-style:normal}
+.story p{margin:0}
+.block ul{margin:0;padding-left:1.4rem}
+.lens .label{color:var(--lens)}
+.src{font-size:.9rem;display:flex;flex-wrap:wrap;gap:0 1rem}
+.tablewrap{overflow-x:auto}
+.cal{width:100%;border-collapse:collapse}
+.cal td{padding:0 .6rem 0 0;vertical-align:top}
+.cal td:first-child{font-weight:bold;white-space:nowrap}
+.note{font-size:.9rem;font-style:italic}
+.archive{list-style:none;margin:0;padding:0}
+.archive li{padding-block:.6rem;border-bottom:1px solid #000}
+.archive a{font-weight:bold}
+.archive .edition{margin-left:.6rem}
+.archive .note{display:block}
+#xbtn{position:fixed;z-index:20}
+#xbtn button{font:bold .9rem/1 "Times New Roman",Times,serif;background:var(--navy);color:var(--gold);border:0;border-radius:999px;padding:.55rem 1rem;box-shadow:0 2px 8px rgba(0,0,0,.3);cursor:pointer}
+#xpanel{position:fixed;z-index:21;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom,0px));width:min(44rem,calc(100% - 24px));max-height:min(70vh,36rem);display:flex;flex-direction:column;background:#fff;border:2px solid var(--navy);border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.35);line-height:1.6;font-size:17px}
+#xpanel[hidden],#xbtn[hidden]{display:none}
+.xhead{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--navy);color:var(--cream);padding:.5rem .9rem;border-radius:7px 7px 0 0;font-weight:bold}
+.xhead button{background:none;border:0;color:var(--cream);font-size:1.6rem;line-height:1;cursor:pointer;padding:0 .2rem}
+#xbody{overflow-y:auto;padding:.4rem .9rem}
+#xbody p{margin:.5rem 0}
+#xbody ul{margin:.3rem 0;padding-left:1.3rem}
+.xwait{font-style:italic}
+.xfoot{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap;border-top:1px solid #000;padding:.45rem .9rem;font-size:.8rem;font-style:italic}
+.xfoot button{font:inherit;font-style:normal;font-weight:bold;background:var(--gold);color:var(--navy);border:0;border-radius:4px;padding:.3rem .6rem;cursor:pointer}
+.xfoot button[hidden]{display:none}
+</style>
+</head>
+<body>
+<header class="mast"><div class="mast-in">
+<a href="../index.html" aria-label="Southern Watch home"><img src="../assets/logo.png" alt="Southern Watch: geopolitics from Australia's angle" width="640" height="591"></a>
+<span class="dateline">Tuesday 10 November 2026 · Sydney</span><span class="views" id="views" hidden></span>
+<script>
+(function(){
+  var key = "2026-11-10", el = document.getElementById("views"), seen = false;
+  try { seen = localStorage.getItem("sw-seen-" + key) === "1"; } catch (e) {}
+  var url = "https://abacus.jasoncameron.dev/" + (seen ? "get" : "hit") + "/caselka-southern-watch/" + key;
+  fetch(url).then(function(r){ return r.json(); }).then(function(d){
+    if (typeof d.value !== "number") return;
+    try { localStorage.setItem("sw-seen-" + key, "1"); } catch (e) {}
+    el.textContent = "Viewed by " + d.value.toLocaleString("en-AU") + (d.value === 1 ? " reader" : " readers");
+    el.hidden = false;
+  }).catch(function(){});
+})();
+</script><nav><a href="../index.html">Latest</a><a href="../archive/index.html">Archive</a><a href="../archive/2026-11-09-updated.html">← Previous</a></nav>
+</div></header>
+<main class="wrap">
+<section class="bluf"><span class="label">Bottom line up front</span><ol><li>Qatar&#x27;s PM took Iran&#x27;s <strong>two-day Hormuz proposal</strong> to Trump behind closed doors. No outcome has been announced. Brent fell almost 5% to about <strong>US$94</strong> on hopes of no new strikes, but Tehran says its uranium stays in Iran and its forces now plan for a response with <strong>&quot;no geographical limits&quot;</strong>.</li><li>The first <strong>US-brokered Russia–Ukraine talks since February</strong> open in Abu Dhabi today (10–11 Nov), with EU and NATO officials nearby. Moscow says it won&#x27;t accept a freeze and is casting Europe as the obstacle to peace.</li><li>Trump says he expects a <strong>Trump–Xi–Putin meeting at APEC in Shenzhen (18–19 Nov)</strong>, and Beijing has extended a trade-truce gesture. Closer to home, Beijing&#x27;s consulate is pressing Victoria over the <strong>killing of a Chinese delivery rider in Melbourne</strong>.</li></ol></section>
+<article class="story">
+<div class="meta"><span class="tag hi">Priority</span><span class="tag">Middle East</span><span class="tag">Confidence: moderate</span></div>
+<h2>Qatar takes Iran&#x27;s two-day Hormuz plan to Trump; no breakthrough yet</h2>
+<div class="block"><span class="label">What happened</span><ul><li>9 Nov (US time): Trump met Qatari PM Sheikh Mohammed bin Abdulrahman Al Thani at the White House for just under an hour, behind closed doors. There was no public readout. Axios reported Qatar wanted Trump to give diplomacy more time.</li><li>The proposal Qatar carried, as reported: Iran reopens Hormuz and stops attacks on Gulf tankers. In return the US lifts its naval and economic blockade and releases about US$8b of Iranian funds held in Qatar. Iran has cut its proposed implementation period from seven days to two, which spokesman Baqaei called a &quot;sign of goodwill&quot;.</li><li>Trump on 60 Minutes, asked about escalating: &quot;I&#x27;m not looking to. I don&#x27;t think there&#x27;s any reason to.&quot; He said Task Force Iron Gate, which extends the blockade to land routes, &quot;is in full force and effect&quot;. Rubio said the sides are not &quot;at the verge of a breakthrough&quot; and called Iran&#x27;s demands &quot;unacceptable&quot;.</li><li>Iran&#x27;s terms: Baqaei says there is &quot;no reason&quot; to send its 60% enriched uranium abroad. He says any deal must include lifting sanctions, ending the blockade, unfreezing assets and a ceasefire on all fronts. Iranian media cite a security source saying there will be no talks until the US acts on seven conditions (unconfirmed).</li><li>At sea: the UK&#x27;s maritime agency (UKMTO) reclassified Saturday&#x27;s tanker fire north of Khasab, Oman, as an attack. Iranian state TV said four tankers were &quot;brought to a standstill&quot; in 24 hours. Saudi Arabia&#x27;s East-West pipeline was hit again, causing a &quot;limited fire&quot; in Medina region.</li><li>Brent fell about 4.7% on 9 Nov to roughly US$93.75 (session low US$92.80). It had already dropped 16% the week before.</li></ul></div>
+<div class="block"><span class="label">Why it matters for Australia</span><p>Australia imports most of its liquid fuel as refined product from Asian refineries that run on Gulf crude. A deal that reopens Hormuz would be the single biggest relief for petrol and diesel prices and for the RBA&#x27;s inflation outlook. Equally, a breakdown would push prices back toward US$100. The Quad foreign ministers (31 Oct) listed Hormuz freedom of navigation as a shared priority, so Canberra is on record. Any mine-clearance or escort coalition after a deal could bring requests for ADF contributions.</p></div>
+<div class="lens"><span class="label">State media framing · Tehran and Beijing</span><p>Tehran puts the onus on Washington. Araghchi says it is now the White House&#x27;s turn to choose: accept the two-day plan or &quot;choose war&quot; (IRNA). The IRGC calls Trump&#x27;s claims of controlling Hormuz and clearing mines &quot;sheer lies&quot; (Press TV). Tehran presents its own shipping stoppages as halting &quot;smuggling&quot;. Beijing is more measured. Xinhua&#x27;s Chinese-language feed reports both sides with careful attribution. It quotes Trump saying more strikes are &quot;extremely unlikely&quot; and the IRGC calling Iron Gate &quot;just wordplay&quot;. China&#x27;s Middle East envoy Zhai Jun met Iranian security officials in Tehran and called for &quot;political solutions&quot;. Press TV goes further and presents China as rejecting &quot;US-Israel aggression&quot;, which Beijing&#x27;s own wording does not say.</p></div>
+<div class="angle"><span class="label">Angle to build</span><p>Is Qatar&#x27;s plan an interim ceasefire for shipping that puts off the nuclear question? If so, whom does that suit: Trump after the midterms, Tehran, or Beijing ahead of APEC? And what does it mean for Australia if Hormuz reopens while Iran&#x27;s enriched uranium stockpile stays unresolved?</p></div>
+<div class="src"><a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-deal-negotiations/" rel="noopener">CBS News live updates, 9 Nov 2026</a><a href="https://www.koreatimes.co.kr/world/20261110/oil-falls-almost-5-as-trump-signals-restraint-on-iran" rel="noopener">Korea Times / Reuters, 10 Nov 2026</a><a href="https://presstv.co.uk/Detail/2026/11/09/780342/transfer-of-highly-enriched-uranium-not-on-irans-agenda-fm-spokesman" rel="noopener">Press TV, 9 Nov 2026</a><a href="https://en.irna.ir/news/86316245/Araghchi-Now-it-is-White-House-s-turn-to-make-a-choice" rel="noopener">IRNA, 9 Nov 2026</a><a href="https://presstv.co.uk/Detail/2026/11/09/780333/irgc-trumps-claims-of-control-over-hormuz-strait-mine-clearance-sheer-lies" rel="noopener">Press TV, 9 Nov 2026</a><a href="https://t.me/xhnews/8176" rel="noopener">Xinhua Telegram (Chinese), 9 Nov 2026</a></div>
+</article>
+<article class="story">
+<div class="meta"><span class="tag hi">Priority</span><span class="tag">Europe</span><span class="tag">Confidence: high</span></div>
+<h2>Russia, Ukraine and US resume peace talks in Abu Dhabi</h2>
+<div class="block"><span class="label">What happened</span><ul><li>10–11 Nov: US-mediated trilateral talks in Abu Dhabi, the first since the process stalled when the Iran war began in late February.</li><li>Delegations: Witkoff and Kushner for the US. Ukraine sends Rustem Umerov with Kyrylo Budanov, Sergiy Kyslytsya and Davyd Arakhamia. Russia&#x27;s reinforced team is led by Vladimir Medinsky and reportedly includes Sergei Ryabkov and Mikhail Galuzin.</li><li>Agenda: post-war security arrangements, de-escalation and humanitarian issues. Kushner says a &quot;comprehensive and lasting settlement&quot; needs Russia and Europe to deal directly on security.</li><li>An EU team led by Bjoern Seibert (von der Leyen&#x27;s chief of staff) is attending, with E3 national security advisers, Italy and a NATO representative. Russia has not said whether it will meet them.</li><li>Both sides kept striking energy targets on the eve of the talks. Zelensky says Russia used North Korean-made KN-23 missiles on a key energy facility on Saturday (preliminary findings, site unnamed).</li><li>Trump has said Ukraine may end up taking &quot;a little bit different shape&quot; (via RT, unconfirmed wording).</li></ul></div>
+<div class="block"><span class="label">Why it matters for Australia</span><p>Australia&#x27;s support package for Ukraine and its sanctions on Russia are tied to how this settlement handles territory. A deal that rewards seizing land by force cuts against the rules-based order Canberra argues for in the Indo-Pacific. There is also a direct consular angle. ABC reports Daryl Fladung, 38, a Queensland security guard with no military experience, flew to Moscow in April and signed a Russian army contract. He has been missing since late June and is feared dead. He is the first Australian known to have joined Russia&#x27;s army since 2022. DFAT would not confirm what it knows.</p></div>
+<div class="lens"><span class="label">State media framing · Moscow</span><p>Moscow is setting terms and blaming Europe in advance. TASS reports Nebenzya saying Russia will reject a freeze that &quot;preserves the existing security threat&quot; (translated). Ryabkov claims the West plans to blockade Kaliningrad, which &quot;would lead directly to disaster&quot;. Shoigu accuses Europe of &quot;offensive military exercises&quot;, and the SVR says the EU wants &quot;cannon fodder&quot;. TASS gives prominence to Kushner&#x27;s call for Russia–Europe security talks and contrasts it with EU resistance. RT links Trump&#x27;s &quot;different shape&quot; remark to Moscow&#x27;s demand that &quot;new territorial realities&quot; be recognised. MoD Russia keeps reporting gains, most recently Vasilkovoye in Zaporozhye.</p></div>
+<div class="angle"><span class="label">Angle to build</span><p>Moscow wants a US-brokered deal but casts Europe as the spoiler. Does putting the EU in the room strengthen Kyiv, or give Moscow a reason to stall? Compare this with how Beijing might try to split Washington from its Indo-Pacific allies in a future Taiwan negotiation.</p></div>
+<div class="src"><a href="https://www.euronews.com/2026/11/09/eu-to-send-joint-team-to-ukraine-russia-peace-talks-in-abu-dhabi" rel="noopener">Euronews, 9 Nov 2026</a><a href="https://united24media.com/war-in-ukraine/kushner-outlines-four-priorities-for-ending-war-as-us-consults-europe-before-abu-dhabi-talks-24211" rel="noopener">UNITED24 Media, Nov 2026</a><a href="https://www.abc.net.au/news/2026-11-10/australian-daryl-fladung-feared-dead-fighting-for-russia/107365110" rel="noopener">ABC, 10 Nov 2026</a><a href="https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/" rel="noopener">NK News, 9 Nov 2026</a><a href="https://t.me/tass_agency/404755" rel="noopener">TASS Telegram (Russian), 9 Nov 2026</a><a href="https://t.me/tassagency_en/98182" rel="noopener">TASS Telegram (English), 9 Nov 2026</a></div>
+</article>
+<article class="story">
+<div class="meta"><span class="tag">Middle East</span><span class="tag">Confidence: moderate</span></div>
+<h2>Iran announces offensive doctrine with &#x27;no geographical limits&#x27;</h2>
+<div class="block"><span class="label">What happened</span><ul><li>9 Nov: Army spokesman Brig. Gen. Mohammad Akraminia said Iran&#x27;s military doctrine has moved from a defensive to an offensive approach. &quot;Effective response&quot; without geographical limits is now operational strategy (ISNA, via ANI). IRNA ties this to new directives from Commander-in-Chief Mojtaba Khamenei.</li><li>The same day, President Pezeshkian said the Supreme Leader had ordered officials to end the state of &quot;neither war nor peace&quot;. He added: &quot;We favor dialogue and negotiations... we will not surrender to force and bullying.&quot;</li><li>Press TV ran an opinion piece listing possible targets: US bases across the Gulf, Jordan and Djibouti, plus Diego Garcia, undersea internet cables, energy terminals, Gulf desalination plants and Israeli nuclear and tech sites.</li><li>No source formally links the doctrine announcement to Pezeshkian&#x27;s remarks. The link is implied by timing.</li></ul></div>
+<div class="block"><span class="label">Why it matters for Australia</span><p>Naming Diego Garcia, and asserting that any territory that &quot;facilitates attacks&quot; on Iran is a target, is deterrence messaging aimed at US partners. Australia hosts US force posture and has ADF personnel in the Middle East. The threat to subsea cables on Asia–Europe routes matters to Australia&#x27;s data links. Threats to Gulf energy and desalination plants feed straight into fuel prices.</p></div>
+<div class="lens"><span class="label">State media framing · Tehran</span><p>Tehran presents the shift as defensive deterrence, not escalation. Press TV says Iran &quot;is not racing to catch up&quot; but lifting limits on what it already has. It describes Tehran as &quot;drawing the map of the next potential war in advance&quot;. It also warns: &quot;that territory is no longer off-limits to Iranian retaliation.&quot; Speaker Ghalibaf adds a wedge aimed at US domestic politics, saying Israel wants to drag the US into an &quot;endless war&quot;. Beijing and Moscow have not commented on the doctrine in the outlets reviewed.</p></div>
+<div class="angle"><span class="label">Angle to build</span><p>Is this a real change in Iranian military planning or bargaining leverage timed to the Qatar talks? How should countries hosting US facilities, including Australia, judge their exposure to a declared &#x27;facilitator&#x27; doctrine?</p></div>
+<div class="src"><a href="https://aninews.in/news/world/middle-east/iran-army-spokesperson-says-effective-response-will-define-new-military-doctrine20261109203220/" rel="noopener">ANI, 9 Nov 2026</a><a href="https://www.middleeastmonitor.com/20261109-iran-open-to-negotiations-to-end-no-war-no-peace-situation-president/" rel="noopener">Middle East Monitor, 9 Nov 2026</a><a href="https://www.presstv.co.uk/Detail/2026/11/09/780303/what-irans-no-geographical-restrictions-doctrine-really-means-for-the-next-war-and-its-likely-target" rel="noopener">Press TV (opinion), 9 Nov 2026</a><a href="https://en.irna.ir/news/86316892/Iran-adopts-faster-response-expanded-operational-reach-under" rel="noopener">IRNA, 9 Nov 2026</a></div>
+</article>
+<article class="story">
+<div class="meta"><span class="tag">Indo-Pacific</span><span class="tag">Confidence: moderate</span></div>
+<h2>Trump heads for APEC in Shenzhen and floats a Trump–Xi–Putin meeting</h2>
+<div class="block"><span class="label">What happened</span><ul><li>Trump says he expects to meet Putin and Xi together during his trip to the APEC leaders&#x27; meeting in Shenzhen on 18–19 Nov: &quot;one of the meetings I think will be with President Putin and President Xi&quot;. He says the agenda includes &quot;denuclearization&quot; and ending the Iran war. Peskov says &quot;work is underway&quot;. Beijing has announced no trilateral.</li><li>A Manila stop on 16 Nov has been reported (New York Post, citing the Philippine palace). This is not confirmed by the White House.</li><li>SCMP reports US military transport aircraft landing in Shenzhen, widely read as preparation for the visit.</li><li>10 Nov: China&#x27;s Commerce Ministry extended for two more months its suspension of export-control measures against 16 US entities (listed April 2025). It said this implements the consensus from the &quot;eighth round&quot; of US–China trade talks. The broader trade truce runs to January.</li><li>This would be the third Trump–Xi meeting this year, after Beijing in May and Washington in September.</li></ul></div>
+<div class="block"><span class="label">Why it matters for Australia</span><p>A great-power deal over Iran or Ukraine struck in China, without allies present, is the &#x27;Yalta 2.0&#x27; scenario Lowy&#x27;s Interpreter warns about. Canberra would want assurance that Taiwan, the South China Sea and the alliance are not part of any trade-off. A stable US–China trade truce helps Australian exporters. A summit that reads as Washington accommodating Beijing would sharpen the domestic AUKUS debate. ASPI this week stressed that the PLA Southern Theater Command, not global Chinese dominance, is Australia&#x27;s most direct military threat.</p></div>
+<div class="lens"><span class="label">State media framing · Beijing and Moscow</span><p>Beijing is staging APEC as proof of its openness to trade. CGTN uses the import expo to promote APEC and Global South links, and Xinhua reports more than US$650m in US farm deals signed there. On the US, Xinhua&#x27;s Chinese feed highlights division: Jeffries says Hegseth &quot;must go&quot;, and Democrats plan to roll back &quot;unreasonable&quot; tariffs. On the Nvidia affair, FM spokesman Guo Jiakun called &quot;Chinese spy&quot; claims &quot;pure speculation and slander&quot; (translated). Beijing has not confirmed the trilateral. Moscow, through Peskov, calls it &quot;extremely useful&quot;. Lowy argues it has little upside for Beijing with Europe.</p></div>
+<div class="angle"><span class="label">Angle to build</span><p>Beijing hosting both Trump and Putin lets it play convenor on Iran and Ukraine. What would it want in return, and on which Indo-Pacific issues? How would Canberra detect and respond to a quiet trade-off?</p></div>
+<div class="src"><a href="https://www.breitbart.com/politics/2026/11/09/trump-will-meet-with-vladimir-putin-xi-jinping-in-trilateral-meeting-in-china/" rel="noopener">Breitbart, 9 Nov 2026</a><a href="https://t.me/xhnews/8187" rel="noopener">Xinhua Telegram (Chinese), 10 Nov 2026</a><a href="https://t.me/xhnews/8184" rel="noopener">Xinhua Telegram (Chinese), 10 Nov 2026</a><a href="https://www.lowyinstitute.org/the-interpreter/yalta-2-0-a-trump-xi-putin-summit-has-little-upside-for-beijing" rel="noopener">Lowy Interpreter, Nov 2026</a><a href="https://www.aspistrategist.org.au/for-australia-the-most-important-pla-element-is-southern-theater-command/" rel="noopener">ASPI Strategist, 5 Nov 2026</a></div>
+</article>
+<article class="story">
+<div class="meta"><span class="tag">Australia</span><span class="tag">Confidence: high</span></div>
+<h2>Chinese consulate presses Victoria over killing of delivery rider in Melbourne</h2>
+<div class="block"><span class="label">What happened</span><ul><li>6 Nov, about 8.10pm: a Chinese national working as a HungryPanda food-delivery rider was killed near Queen Victoria Market, Melbourne. Another rider was injured. Police say two riders confronted a man suspected of tampering with their bikes, and an altercation followed. A 51-year-old man was arrested.</li><li>The Chinese Consulate-General activated its &quot;emergency consular protection mechanism&quot;. Consul-General Fang Xinwen phoned the Victorian Premier and asked that the perpetrator be &quot;severely punished&quot;. Global Times reports the Premier promised justice.</li><li>A Weibo hashtag about the victim&#x27;s long working hours drew more than 4.9 million views. SCMP reports online outrage in China over delivery-rider safety.</li></ul></div>
+<div class="block"><span class="label">Why it matters for Australia</span><p>The case is now a bilateral consular issue as well as a criminal one. Beijing&#x27;s public pressure on a state premier tests how Canberra and Victoria handle Chinese official advocacy while police and courts work independently. It also shapes perceptions of Australia among Chinese students, workers and tourists, a key relationship since stabilisation. Watch whether Beijing&#x27;s framing stays on this one case or widens into claims about the safety of Chinese nationals in Australia.</p></div>
+<div class="lens"><span class="label">State media framing · Beijing</span><p>So far the framing is restrained. Global Times reports the consulate calling police to &quot;bring the perpetrator to justice&quot; and to handle the case fairly. It makes no wider claims about Australia&#x27;s safety. Xinhua&#x27;s Chinese feed reports the consulate asking police to &quot;severely punish the perpetrator&quot; and protect Chinese citizens&#x27; rights (translated). State outlets give prominence to human-interest detail about the victim&#x27;s long hours and his family back home. There is no commentary attacking Australia.</p></div>
+<div class="angle"><span class="label">Angle to build</span><p>Compare this restrained tone with how Beijing framed incidents involving Chinese nationals during the 2020–22 downturn. What does that suggest about how much Beijing values the current stabilisation?</p></div>
+<div class="src"><a href="https://www.globaltimes.cn/page/202611/1373849.shtml" rel="noopener">Global Times, 7 Nov 2026</a><a href="https://www.scmp.com/news/china/diplomacy/article/3373640/chinese-consulate-melbourne-demands-justice-after-fatal-stabbing-delivery-worker" rel="noopener">SCMP, Nov 2026</a><a href="https://mothership.sg/2026/11/chinese-delivery-rider-killed-melbourne/" rel="noopener">Mothership, Nov 2026</a><a href="https://t.me/xhnews/8152" rel="noopener">Xinhua Telegram (Chinese), 8 Nov 2026</a></div>
+</article>
+<section class="story"><span class="label">Watch list</span><div class="tablewrap"><table class="cal"><tr><td>10-11 NOV</td><td>Russia–Ukraine–US talks in Abu Dhabi, with EU and NATO officials present. Watch whether Russia&#x27;s delegation meets the EU team.</td></tr><tr><td>10 NOV (US)</td><td>House Democrats discuss impeaching Defence Secretary Hegseth over the Iran war.</td></tr><tr><td>11 NOV</td><td>Putin chairs CSTO summit, which is to adopt an anti-terrorism strategy to 2030.</td></tr><tr><td>10-13 NOV</td><td>Cuban FM Bruno Rodríguez visits China as special envoy.</td></tr><tr><td>ONGOING</td><td>White House response to Iran&#x27;s two-day Hormuz proposal. Watch also mine and tanker incidents and Brent near US$94.</td></tr><tr><td>16 NOV (REPORTED)</td><td>Possible Trump stop in Manila before China.</td></tr><tr><td>18-19 NOV</td><td>APEC leaders&#x27; meeting, Shenzhen: possible Trump–Xi bilateral and Trump–Xi–Putin trilateral.</td></tr><tr><td>TO 20 NOV</td><td>COP31 in Antalya, Türkiye.</td></tr></table></div><p class="note">State media (Global Times, Xinhua, TASS, Tehran Times, IRNA, KCNA) show each government's official position and the messages it wants to spread. They are not independent evidence of what happened.</p></section>
+</main>
+<div id="xbtn" hidden><button type="button">Explain</button></div>
+<div id="xpanel" hidden role="dialog" aria-modal="false" aria-labelledby="xtitle">
+<div class="xhead"><span id="xtitle"></span><button type="button" id="xclose" aria-label="Close">×</button></div>
+<div id="xbody" aria-live="polite"></div>
+<div class="xfoot"><button type="button" id="xdeep">Search the web for the latest</button><span>Claude, via your Pi</span></div>
+</div>
+<script>
+(() => {
+  // Highlight-to-explain. Only works on the owner's devices (Tailscale); for everyone else nothing appears.
+  const API = "https://raspberrypi.tail52911d.ts.net";
+  const $ = id => document.getElementById(id);
+  const btn = $("xbtn"), panel = $("xpanel"), body = $("xbody");
+  let avail = null, sel = "", ctx = "", timer;
+  const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  function md(t){
+    const inl = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/(^|[\s(])(https?:\/\/[^\s<)]+)/g, '$1<a href="$2" target="_blank" rel="noopener">link</a>');
+    let out = "", list = [];
+    for (const raw of t.split("\n")) {
+      const l = raw.trim();
+      if (/^[-*] /.test(l)) { list.push("<li>" + inl(l.slice(2)) + "</li>"); continue; }
+      if (list.length) { out += "<ul>" + list.join("") + "</ul>"; list = []; }
+      if (l) out += "<p>" + inl(l.replace(/^#+\s*/, "")) + "</p>";
+    }
+    return out + (list.length ? "<ul>" + list.join("") + "</ul>" : "");
+  }
+  async function available(){
+    if (avail !== null) return avail;
+    try {
+      const c = new AbortController(); setTimeout(() => c.abort(), 4000);
+      const r = await fetch(API + "/explain/ping", {signal: c.signal});
+      avail = r.ok && (await r.json()).ok;
+    } catch (e) { avail = false; }
+    return avail;
+  }
+  function place(range){
+    const r = range.getBoundingClientRect();
+    btn.hidden = false;
+    const w = btn.offsetWidth, h = btn.offsetHeight;
+    let top = r.bottom + 10; if (top + h > innerHeight - 8) top = Math.max(8, r.top - h - 10);
+    btn.style.top = top + "px";
+    btn.style.left = Math.min(innerWidth - w - 8, Math.max(8, r.left + r.width / 2 - w / 2)) + "px";
+  }
+  document.addEventListener("selectionchange", () => {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const s = getSelection(), t = s ? s.toString().replace(/\s+/g, " ").trim() : "";
+      if (!t || t.length < 2 || t.length > 300 || !s.rangeCount) { btn.hidden = true; return; }
+      const node = s.anchorNode && (s.anchorNode.nodeType === 1 ? s.anchorNode : s.anchorNode.parentElement);
+      if (!node || !node.closest("main") || node.closest("#xpanel")) { btn.hidden = true; return; }
+      if (!(await available())) return;
+      sel = t;
+      const box = node.closest(".story, .bluf") || node.closest("main");
+      ctx = (box.innerText || "").slice(0, 3500);
+      place(s.getRangeAt(0));
+    }, 350);
+  });
+  addEventListener("scroll", () => { btn.hidden = true; }, {passive: true});
+  async function ask(deep){
+    panel.hidden = false; btn.hidden = true;
+    $("xtitle").textContent = sel.length > 60 ? sel.slice(0, 57) + "…" : sel;
+    $("xdeep").hidden = true;
+    body.innerHTML = '<p class="xwait">' + (deep ? "Searching the web… (up to a minute)" : "Thinking… (about 10 seconds)") + "</p>";
+    try {
+      const r = await fetch(API + "/explain", {method: "POST", headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({text: sel, context: ctx, deep, date: (document.querySelector(".dateline") || {}).textContent || ""})});
+      const d = await r.json();
+      body.innerHTML = d.answer ? md(d.answer) : '<p class="xwait">' + esc(d.error || "No answer") + "</p>";
+      $("xdeep").hidden = !!deep || !d.answer;
+    } catch (e) { body.innerHTML = '<p class="xwait">Couldn\'t reach the Pi. Is Tailscale on?</p>'; }
+  }
+  for (const ev of ["mousedown", "touchstart"]) btn.addEventListener(ev, e => e.preventDefault(), {passive: false});
+  btn.querySelector("button").addEventListener("click", () => ask(false));
+  $("xdeep").addEventListener("click", () => ask(true));
+  $("xclose").addEventListener("click", () => { panel.hidden = true; });
+  addEventListener("keydown", e => { if (e.key === "Escape") panel.hidden = true; });
+})();
+</script>
+</body>
+</html>
