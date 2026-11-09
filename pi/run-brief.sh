@@ -26,6 +26,18 @@ fi
 
 PROMPT=$(sed -e "s/{{DATE}}/$DATE/g" -e "s/{{DATE_LONG}}/$DATE_LONG/g" pi/prompt.md)
 
+# Private Source Digests from the last 24h (written on the Pi, never committed)
+DIGESTS=""
+HIST="$HOME/osint/digest/work/history"
+if [ -d "$HIST" ]; then
+  for f in $(find "$HIST" -name '*.md' -mmin -1500 | sort | tail -3); do
+    DIGESTS+=$'\n\n'"### Digest $(basename "$f" .md)"$'\n'"$(cat "$f")"
+  done
+fi
+[ -n "$DIGESTS" ] || DIGESTS="(No Source Digest available today. Rely on web research.)"
+echo "digests used: $(find "$HIST" -name '*.md' -mmin -1500 2>/dev/null | wc -l)"
+PROMPT="${PROMPT//\{\{DIGESTS\}\}/$DIGESTS}"
+
 timeout 40m claude -p "$PROMPT" \
   --allowedTools "WebSearch" "WebFetch" "Edit(data/**)" \
   --max-turns 80 \
