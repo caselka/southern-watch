@@ -21,3 +21,9 @@ A daily foreign and security brief from an Australian angle. Each story pairs th
 Optional repository variables / env: `SW_MODEL` (default `claude-opus-5-5`), `SW_EFFORT` (default `high`; `medium` is cheaper).
 
 Rebuild the site locally without calling the API: `python build.py`.
+
+## Running on the Raspberry Pi (current setup)
+
+The paid GitHub Action is turned off. Instead a Raspberry Pi runs `pi/run-brief.sh` from cron every morning:
+Claude Code (logged in to a Claude subscription) researches the news and writes `data/YYYY-MM-DD.json`,
+then the script validates it, runs `build.py` and pushes. Logs are in `~/brief-logs/` on the Pi.
