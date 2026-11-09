@@ -14,67 +14,51 @@ DATA = ROOT / "data"
 DOCS = ROOT / "docs"
 
 CSS = """
-/* Layout: navy masthead carrying the logo, then one calm reading column */
-:root{
-  --navy:#0f1b2d; --navy-2:#16263d; --gold:#f5b81c; --cream:#f3eee6;
-  --bg:#fbfaf7; --surface:#ffffff; --ink:#1a1f29; --muted:#5d6573; --rule:#e4e1da;
-  --lens:#9a2f2f; --lens-bg:#f8eeec; --angle-bg:#fbf4df;
-  --head:"Montserrat","Arial",sans-serif;
-  --body:"Source Serif 4",Georgia,serif;
-  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
-  color-scheme:light;
-}
-@media (prefers-color-scheme: dark){:root{
-  --bg:#0c1522; --surface:#122033; --ink:#e7ebf0; --muted:#97a3b3; --rule:#22344c;
-  --lens:#ef9a8f; --lens-bg:#2a1c22; --angle-bg:#2a2615; color-scheme:dark}}
+/* Navy masthead with the logo, then a plain document: white page, black Times New Roman, double-spaced */
+:root{--navy:#0f1b2d;--gold:#f5b81c;--cream:#f3eee6;--lens:#8b0000;color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.65}
-a{color:inherit;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+html,body{background:#ffffff;color:#000000}
+body{margin:0;font-family:"Times New Roman",Times,serif;font-size:18px;line-height:2}
+a{color:#000000;text-decoration:underline}
+a:focus-visible{outline:2px solid #000;outline-offset:2px}
 .mast{background:var(--navy);color:var(--cream)}
-.mast-in{max-width:46rem;margin:0 auto;padding-block:1.25rem 1.5rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;justify-items:center;gap:.75rem;text-align:center}
-.mast img{width:min(230px,62vw);height:auto;display:block}
-.mast nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem 1.4rem;font:500 .74rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
-.mast nav a{color:var(--cream);text-decoration:none;opacity:.8}
-.mast nav a:hover{opacity:1;color:var(--gold)}
-.dateline{font:500 .78rem var(--mono);letter-spacing:.08em;color:var(--cream);opacity:.85;text-transform:uppercase}
-.edition{display:inline-block;background:var(--gold);color:var(--navy);font:700 .7rem var(--head);letter-spacing:.12em;text-transform:uppercase;padding:.25rem .6rem;border-radius:3px}
-.wrap{max-width:46rem;margin:0 auto;padding-block:2rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h2{font:700 1.45rem/1.2 var(--head);margin:0;text-wrap:balance;letter-spacing:-.01em}
-.label{font:700 .72rem var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.bluf{display:grid;gap:.6rem;padding-bottom:1.6rem;border-bottom:3px solid var(--gold)}
-.bluf .label{color:var(--ink)}
-.bluf ol{margin:0;padding-left:1.25rem;display:grid;gap:.55rem}
-.story{display:grid;gap:.85rem;padding-block:1.9rem;border-bottom:1px solid var(--rule)}
-.meta{display:flex;flex-wrap:wrap;gap:.45rem}
-.tag{font:500 .68rem var(--mono);letter-spacing:.05em;color:var(--muted);border:1px solid var(--rule);padding:.12rem .45rem;border-radius:3px}
-.tag.hi{color:var(--navy);background:var(--gold);border-color:var(--gold);font-weight:700}
+.mast-in{max-width:44rem;margin:0 auto;padding-block:1.25rem 1.25rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;justify-items:center;gap:.4rem;text-align:center;line-height:1.5}
+.mast img{width:min(220px,60vw);height:auto;display:block}
+.mast nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.2rem 1.4rem;font-size:.95rem}
+.mast nav a{color:var(--cream)}
+.mast nav a:hover{color:var(--gold)}
+.dateline{font-style:italic;font-size:.95rem;color:var(--cream)}
+.edition{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .5rem;border-radius:2px}
+.wrap{max-width:44rem;margin:0 auto;padding-block:1.5rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
+.label{display:block;font-size:1.05rem;font-weight:bold;font-style:italic;line-height:1.4;margin-top:.6rem}
+.bluf{border-bottom:1px solid #000;padding-bottom:1rem}
+.bluf .label{font-size:1.4rem;font-style:normal;margin-top:0}
+.bluf ol{margin:0;padding-left:1.4rem}
+.story{padding-block:1.5rem;border-bottom:1px solid #000}
+.meta{font-size:.9rem;font-style:italic}
+.tag+.tag::before{content:" · "}
+.tag.hi{font-weight:bold;font-style:normal}
 .story p{margin:0}
-.block{display:grid;gap:.3rem}
-.block ul{margin:0;padding-left:1.15rem;display:grid;gap:.3rem}
-.lens,.angle{padding:.9rem 1.1rem;border-radius:6px;display:grid;gap:.3rem}
-.lens{background:var(--lens-bg)} .lens .label{color:var(--lens)}
-.angle{background:var(--angle-bg)} .angle .label{color:var(--ink)}
-.src{font:.72rem var(--mono);color:var(--muted);display:flex;flex-wrap:wrap;gap:.3rem 1rem}
-.src a{text-decoration-thickness:1px}
+.block ul{margin:0;padding-left:1.4rem}
+.lens .label{color:var(--lens)}
+.src{font-size:.9rem;display:flex;flex-wrap:wrap;gap:0 1rem}
 .tablewrap{overflow-x:auto}
 .cal{width:100%;border-collapse:collapse}
-.cal td{padding:.5rem .4rem;border-bottom:1px solid var(--rule);vertical-align:top}
-.cal td:first-child{font:600 .78rem var(--mono);white-space:nowrap;font-variant-numeric:tabular-nums}
-.note{font-size:.86rem;color:var(--muted)}
+.cal td{padding:0 .6rem 0 0;vertical-align:top}
+.cal td:first-child{font-weight:bold;white-space:nowrap}
+.note{font-size:.9rem;font-style:italic}
 .archive{list-style:none;margin:0;padding:0}
-.archive li{display:grid;gap:.25rem;padding-block:1rem;border-bottom:1px solid var(--rule)}
-.archive a{font:700 1.1rem var(--head);text-decoration:none}
-.archive .edition{justify-self:start}
+.archive li{padding-block:.6rem;border-bottom:1px solid #000}
+.archive a{font-weight:bold}
+.archive .edition{margin-left:.6rem}
+.archive .note{display:block}
 """
 
-FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
-         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700'
-         '&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;600&display=swap">')
+FONTS = ""  # Times New Roman is a system font: nothing to load
 
-NOTE = ("Adversary state media (Global Times, Xinhua, TASS, Tehran Times, IRNA, KCNA) shows each government's "
-        "official position and the messages it wants spread. It is not independent evidence of what happened.")
+NOTE = ("State media (Global Times, Xinhua, TASS, Tehran Times, IRNA, KCNA) show each government's "
+        "official position and the messages it wants to spread. They are not independent evidence of what happened.")
 
 
 def esc(s):
@@ -156,15 +140,15 @@ def render_brief(b, prev_id, next_id, prefix):
              + "".join(f"<li>{inline(x)}</li>" for x in b["bluf"]) + "</ol></section>"]
     for s in b["stories"]:
         tags = (['<span class="tag hi">Priority</span>'] if s.get("priority") else []) + [
-            f'<span class="tag">{esc(s["region"]).upper()}</span>',
-            f'<span class="tag">Confidence: {esc(s["confidence"]).title()}</span>']
+            f'<span class="tag">{esc(s["region"]).title()}</span>',
+            f'<span class="tag">Confidence: {esc(s["confidence"]).lower()}</span>']
         srcs = "".join(f'<a href="{safe_url(x["url"])}" rel="noopener">{esc(x["label"])}</a>' for x in s["sources"])
         parts.append(f"""<article class="story">
 <div class="meta">{''.join(tags)}</div>
 <h2>{inline(s['title'])}</h2>
 <div class="block"><span class="label">What happened</span>{prose(s['what_happened'])}</div>
 <div class="block"><span class="label">Why it matters for Australia</span>{prose(s['why_australia'])}</div>
-<div class="lens"><span class="label">Adversary lens · {esc(s['lens_actor'])}</span>{prose(s['adversary_lens'])}</div>
+<div class="lens"><span class="label">State media framing · {esc(s['lens_actor'])}</span>{prose(s.get('state_media_framing') or s.get('adversary_lens', ''))}</div>
 <div class="angle"><span class="label">Angle to build</span>{prose(s['angle'])}</div>
 <div class="src">{srcs}</div>
 </article>""")
@@ -189,7 +173,7 @@ def render_archive(editions):
 
 
 def main():
-    files = sorted(DATA.glob("*.json"))
+    files = sorted(DATA.glob("*.json"), key=lambda f: f.stem)
     editions = [(f.stem, json.loads(f.read_text(encoding="utf-8"))) for f in files]
     if not editions:
         raise SystemExit("No briefs in data/")

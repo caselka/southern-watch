@@ -14,14 +14,26 @@
       "what_happened": "Taiwan's NSC chief Joseph Wu reported more than 100 PLA Navy and China Coast Guard vessels in the Western Pacific on 3 Nov. On 2 Nov there were 49 air sorties, the highest single day this year. AEI/ISW analysts count four task groups from the Eastern, Northern and Southern Theatre Commands between Taiwan and Guam. These include the Liaoning group, and the Fujian left Sanya on 2 Nov. Daily counts have dropped back since (4 aircraft, 6 vessels in the 24 hours to 6am on 8 Nov).",
       "why_australia": "This drill practises keeping outside navies out of the area, which is the job the US alliance and AUKUS force posture would face in a crisis. It also comes ahead of APEC in Shenzhen (18–19 Nov), where Albanese may go on to Beijing (SCMP, unconfirmed). A visit would test how Canberra keeps stabilisation with China going while this is underway.",
       "lens_actor": "Beijing",
-      "adversary_lens": "The PLA Navy says the Liaoning-led drill is \"not directed at any country or target.\" No name, no announcement. The Taiwan Affairs Office dismisses Taipei's interference claims as DPP \"political maneuvering.\" The message is that this is now routine.",
       "angle": "The last four big Taiwan drills were named and announced, and this one wasn't. That makes it hard to tell a drill from preparations for the real thing. Ask what this does to Australian and US warning time, and whether Defence's planning around warning time still holds.",
       "sources": [
-        {"label": "AEI/ISW 6 Nov", "url": "https://www.aei.org/commentary/china-taiwan-update-november-6-2026/"},
-        {"label": "SCMP", "url": "https://www.scmp.com/news/china/military/article/3373249/taiwan-flags-massive-pla-naval-mobilisation-spike-air-sorties"},
-        {"label": "Taiwan MND via Tribune", "url": "https://www.tribuneindia.com/news/world/taiwan-detects-4-pla-aircraft-6-plan-vessels-operating-near-territory"},
-        {"label": "UTS ACRI", "url": "https://www.uts.edu.au/news/2026/11/australia-china-weekly-brief-november-2026-issues"}
-      ]
+        {
+          "label": "AEI/ISW 6 Nov",
+          "url": "https://www.aei.org/commentary/china-taiwan-update-november-6-2026/"
+        },
+        {
+          "label": "SCMP",
+          "url": "https://www.scmp.com/news/china/military/article/3373249/taiwan-flags-massive-pla-naval-mobilisation-spike-air-sorties"
+        },
+        {
+          "label": "Taiwan MND via Tribune",
+          "url": "https://www.tribuneindia.com/news/world/taiwan-detects-4-pla-aircraft-6-plan-vessels-operating-near-territory"
+        },
+        {
+          "label": "UTS ACRI",
+          "url": "https://www.uts.edu.au/news/2026/11/australia-china-weekly-brief-november-2026-issues"
+        }
+      ],
+      "state_media_framing": "The PLA Navy says the Liaoning-led drill is \"not directed at any country or target.\" No name, no announcement. The Taiwan Affairs Office dismisses Taipei's interference claims as DPP \"political maneuvering.\" The message is that this is now routine."
     },
     {
       "title": "Hormuz still closed as mines hit tankers and Qatar mediates",
@@ -31,15 +43,30 @@
       "what_happened": "Iran says two tankers caught fire after hitting mines on an \"unauthorised route.\" Explosions were heard on Qeshm Island and at Jask, days after US strikes. CENTCOM disabled a St Kitts-flagged ship in the Gulf of Oman. Trump called Friday's strikes on Iranian air defences \"minor\" and is weighing a larger wave now that the midterms are over. The IRGC lifted its self-imposed 2,000 km ballistic missile range cap. Iran is reviewing Qatari proposals on its nuclear program.",
       "why_australia": "Australia imports most of its liquid fuel, so a long closure hits the economy directly. The RBA's 25-point hike to 4.85% cited war-driven energy costs. The ADF has given defensive support to Gulf states since March, so any escalation after the midterms raises the question of how far that commitment goes.",
       "lens_actor": "Tehran and Beijing",
-      "adversary_lens": "Tehran Times quotes FM Araghchi saying Iran is ready for \"both defense and diplomacy\" and that the choice rests with Washington. Iran's plan has the US move first (lift the naval blockade, release frozen assets) and the strait reopen afterwards. Beijing has signed a joint statement with Oman backing reopening, which lets it look like the stabiliser.",
       "angle": "Closing the strait is Iran's main source of leverage, so mines are worth more to it than a deal. Track whether China gets diplomatic credit (and oil) out of Gulf instability while Australia carries the costs as a US ally.",
       "sources": [
-        {"label": "ABC 8 Nov", "url": "https://abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"},
-        {"label": "CBS", "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-negotiations-midterms/"},
-        {"label": "Tehran Times", "url": "https://www.tehrantimes.com/news/531731/Araghchi-Iran-ready-for-both-defense-and-diplomacy-Choice-rests"},
-        {"label": "IRNA", "url": "https://en.irna.ir/news/86310037/Iran-judges-US-by-actions-not-tone-of-letters-Baqaei"},
-        {"label": "Australia and the Iran war", "url": "https://en.wikipedia.org/wiki/Australia_and_the_2026_Iran_war"}
-      ]
+        {
+          "label": "ABC 8 Nov",
+          "url": "https://abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"
+        },
+        {
+          "label": "CBS",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-negotiations-midterms/"
+        },
+        {
+          "label": "Tehran Times",
+          "url": "https://www.tehrantimes.com/news/531731/Araghchi-Iran-ready-for-both-defense-and-diplomacy-Choice-rests"
+        },
+        {
+          "label": "IRNA",
+          "url": "https://en.irna.ir/news/86310037/Iran-judges-US-by-actions-not-tone-of-letters-Baqaei"
+        },
+        {
+          "label": "Australia and the Iran war",
+          "url": "https://en.wikipedia.org/wiki/Australia_and_the_2026_Iran_war"
+        }
+      ],
+      "state_media_framing": "Tehran Times quotes FM Araghchi saying Iran is ready for \"both defense and diplomacy\" and that the choice rests with Washington. Iran's plan has the US move first (lift the naval blockade, release frozen assets) and the strait reopen afterwards. Beijing has signed a joint statement with Oman backing reopening, which lets it look like the stabiliser."
     },
     {
       "title": "Abu Dhabi talks set for 10–11 Nov after Trump meets Putin's envoy",
@@ -49,14 +76,26 @@
       "what_happened": "Trump met Kirill Dmitriev at the White House and said a deal may be close, but gave no details and didn't meet the Ukrainian delegation. Witkoff says working-level talks between Russia, the US and Ukraine will cover post-war security arrangements, de-escalation and humanitarian issues. A Kremlin aide says sanctions relief for Russia's sovereign wealth fund is being discussed. The EU's Kallas rejects any deal made without Europe.",
       "why_australia": "Australia has sanctions on Russia and has sent Bushmasters to Ukraine. A deal that rewards taking territory by force and lifts sanctions sets a precedent that would be read closely in the Indo-Pacific. Australia would also have to decide whether to keep its own sanctions if Washington drops its.",
       "lens_actor": "Moscow",
-      "adversary_lens": "TASS covers this as Russia and the US talking directly as equals. Medinsky leads the delegation, Putin briefed the Security Council on 6 Nov, and Moscow says it may reconsider after Ukrainian attacks. Defence Minister Belousov also calls Russia–China ties \"unprecedentedly high.\"",
       "angle": "Look at who negotiates for Russia. Dmitriev (sovereign wealth fund) is running the economic side and Medinsky the political side. Moscow is trading sanctions relief for a ceasefire. Ask which Australian sanctions would come under pressure first.",
       "sources": [
-        {"label": "TASS (Witkoff)", "url": "https://tass.com/world/2212141"},
-        {"label": "TASS (Putin SC)", "url": "https://tass.com/politics/2214053"},
-        {"label": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/11/6/trump-met-russian-envoy-after-he-appeared-with-melania-trump-and-ukrainians"},
-        {"label": "CNN", "url": "https://www.cnn.com/world/europe/ukraine"}
-      ]
+        {
+          "label": "TASS (Witkoff)",
+          "url": "https://tass.com/world/2212141"
+        },
+        {
+          "label": "TASS (Putin SC)",
+          "url": "https://tass.com/politics/2214053"
+        },
+        {
+          "label": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/6/trump-met-russian-envoy-after-he-appeared-with-melania-trump-and-ukrainians"
+        },
+        {
+          "label": "CNN",
+          "url": "https://www.cnn.com/world/europe/ukraine"
+        }
+      ],
+      "state_media_framing": "TASS covers this as Russia and the US talking directly as equals. Medinsky leads the delegation, Putin briefed the Security Council on 6 Nov, and Moscow says it may reconsider after Ukrainian attacks. Defence Minister Belousov also calls Russia–China ties \"unprecedentedly high.\""
     },
     {
       "title": "North Korea's fourth weapons launch in a month",
@@ -66,13 +105,22 @@
       "what_happened": "KCNA reported cluster-bomb warhead tests (1 Nov), a strategic cruise missile with a dispersal warhead (2 Nov), and a new air-defence missile plus a cruise missile strike drill (4 Nov). NK News says the drill photos were heavily doctored. Talks with Washington remain in doubt.",
       "why_australia": "The ADF regularly sends aircraft and ships to monitor UN sanctions on North Korea. Australia is also strengthening ties with Japan and South Korea. Cluster and dispersal warheads point to battlefield use against airfields, which also matters for how Australia thinks about protecting its own bases.",
       "lens_actor": "Pyongyang and Beijing",
-      "adversary_lens": "KCNA calls the launches routine training of units. Wang Yi calls Xi's June visit to Pyongyang the start of a \"new era.\" AEI reads Beijing as making room for the North's nuclear program instead of restraining it.",
       "angle": "Russia, China and North Korea are increasingly backing each other. Ask whether Australian planning still treats the Korean Peninsula and Taiwan as separate problems.",
       "sources": [
-        {"label": "NK News", "url": "https://www.nknews.org/2026/11/north-korea-tests-anti-aircraft-missiles-conducts-attack-drill-on-airport-kcna/"},
-        {"label": "Reuters via US News", "url": "https://www.usnews.com/news/world/articles/2026-11-02/north-korea-conducts-strategic-cruise-missile-test-with-dispersal-warhead-kcna-says"},
-        {"label": "Stars and Stripes", "url": "https://stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"}
-      ]
+        {
+          "label": "NK News",
+          "url": "https://www.nknews.org/2026/11/north-korea-tests-anti-aircraft-missiles-conducts-attack-drill-on-airport-kcna/"
+        },
+        {
+          "label": "Reuters via US News",
+          "url": "https://www.usnews.com/news/world/articles/2026-11-02/north-korea-conducts-strategic-cruise-missile-test-with-dispersal-warhead-kcna-says"
+        },
+        {
+          "label": "Stars and Stripes",
+          "url": "https://stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"
+        }
+      ],
+      "state_media_framing": "KCNA calls the launches routine training of units. Wang Yi calls Xi's June visit to Pyongyang the start of a \"new era.\" AEI reads Beijing as making room for the North's nuclear program instead of restraining it."
     },
     {
       "title": "The Pacific contest: Solomons treaty, PNG explosive, Quad in Atlanta",
@@ -82,21 +130,48 @@
       "what_happened": "- Canberra and Honiara have an in-principle treaty, reportedly with A$980m in extra funding. Solomon Islands keeps its security pact with China, and PM Wale faces a no-confidence motion.\n- The ABC says a Chinese military-grade explosive found in a container in PNG is a real weapon. Chinese officials had called it a wine bottle.\n- Quad foreign ministers (31 Oct, Atlanta) raised concerns about economic coercion and export restrictions, and announced critical minerals work and port cooperation in Fiji. A leaders' summit is planned for Manila this month.\n- The ADF sent a C-130, a Citation and 20 personnel to help fight the East Kalimantan fires.",
       "why_australia": "Pacific security partnerships are where Australia competes most directly with China for influence, and where Canberra has the most to lose if partners hedge.",
       "lens_actor": "Beijing",
-      "adversary_lens": "Global Times consistently casts AUKUS and Pacific security deals as Australia being used as a \"US chess piece.\" It amplifies Australia Institute polling (59% favour a more independent foreign policy) and the community AUKUS inquiry, which Canberra rejected on 4 Nov.",
       "angle": "Beijing's message to Australians is to drift away from the US, not to fear China. Democrats now control both chambers of Congress, so AUKUS funding will get more US scrutiny. Expect Chinese state media to use that as evidence the US is unreliable.",
       "sources": [
-        {"label": "ABC", "url": "https://www.abc.net.au/news/2026-09-08/solomon-islands-australia-china-pacific-contest/107127740"},
-        {"label": "PINA", "url": "https://pina.com.fj/2026/10/30/australia-sees-gains-in-contest-with-china-for-pacifics-great-game/"},
-        {"label": "Global Times (poll)", "url": "https://www.globaltimes.cn/page/202605/1360500.shtml"},
-        {"label": "Global Times (inquiry)", "url": "https://www.globaltimes.cn/page/202606/1362766.shtml"},
-        {"label": "UTS ACRI", "url": "https://www.uts.edu.au/news/2026/11/australia-china-weekly-brief-november-2026-issues"}
-      ]
+        {
+          "label": "ABC",
+          "url": "https://www.abc.net.au/news/2026-09-08/solomon-islands-australia-china-pacific-contest/107127740"
+        },
+        {
+          "label": "PINA",
+          "url": "https://pina.com.fj/2026/10/30/australia-sees-gains-in-contest-with-china-for-pacifics-great-game/"
+        },
+        {
+          "label": "Global Times (poll)",
+          "url": "https://www.globaltimes.cn/page/202605/1360500.shtml"
+        },
+        {
+          "label": "Global Times (inquiry)",
+          "url": "https://www.globaltimes.cn/page/202606/1362766.shtml"
+        },
+        {
+          "label": "UTS ACRI",
+          "url": "https://www.uts.edu.au/news/2026/11/australia-china-weekly-brief-november-2026-issues"
+        }
+      ],
+      "state_media_framing": "Global Times consistently casts AUKUS and Pacific security deals as Australia being used as a \"US chess piece.\" It amplifies Australia Institute polling (59% favour a more independent foreign policy) and the community AUKUS inquiry, which Canberra rejected on 4 Nov."
     }
   ],
   "watch_list": [
-    {"when": "10–11 NOV", "what": "Russia–US–Ukraine talks, Abu Dhabi"},
-    {"when": "18–19 NOV", "what": "APEC Leaders, Shenzhen. Possible Albanese visit to Beijing"},
-    {"when": "NOV (TBC)", "what": "Quad Leaders' Summit, Manila"},
-    {"when": "ONGOING", "what": "Whether Beijing names the Taiwan operation, and US strikes on Iran after the midterms"}
+    {
+      "when": "10–11 NOV",
+      "what": "Russia–US–Ukraine talks, Abu Dhabi"
+    },
+    {
+      "when": "18–19 NOV",
+      "what": "APEC Leaders, Shenzhen. Possible Albanese visit to Beijing"
+    },
+    {
+      "when": "NOV (TBC)",
+      "what": "Quad Leaders' Summit, Manila"
+    },
+    {
+      "when": "ONGOING",
+      "what": "Whether Beijing names the Taiwan operation, and US strikes on Iran after the midterms"
+    }
   ]
 }

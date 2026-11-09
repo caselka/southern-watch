@@ -3,7 +3,7 @@ import json
 import sys
 
 STORY_KEYS = {"title", "region", "priority", "confidence", "what_happened", "why_australia",
-              "lens_actor", "adversary_lens", "angle", "sources"}
+              "lens_actor", "state_media_framing", "angle", "sources"}
 
 
 def fail(msg):
