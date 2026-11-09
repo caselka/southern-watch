@@ -24,6 +24,23 @@ a:focus-visible{outline:2px solid #000;outline-offset:2px}
 .mast nav a:hover{color:var(--gold)}
 .dateline{font-style:italic;font-size:.95rem;color:var(--cream)}
 .byline{font-size:.85rem;letter-spacing:.06em;color:var(--gold)}
+.find{width:100%;max-width:30rem;text-align:left;font-size:.95rem}
+.find summary{cursor:pointer;color:var(--gold);text-align:center;list-style:none;font-weight:bold}
+.find summary::-webkit-details-marker{display:none}
+.find summary::after{content:" ▾"}
+.find[open] summary::after{content:" ▴"}
+.find-in{display:grid;gap:.5rem;margin-top:.5rem;background:#fff;color:#000;border-radius:6px;padding:.7rem}
+.find-date{display:grid;grid-template-columns:1fr 1.3fr 1.3fr auto;gap:.4rem;align-items:end}
+.find-date label{display:grid;font-size:.75rem;line-height:1.3}
+.find select,.find input,.find button{font:inherit;font-size:16px;padding:.3rem .4rem;border:1px solid #000;border-radius:4px;background:#fff;color:#000;min-width:0;width:100%}
+.find button{background:var(--navy);color:var(--gold);border-color:var(--navy);font-weight:bold;cursor:pointer}
+#fres ul{list-style:none;margin:0;padding:0;max-height:55vh;overflow-y:auto}
+#fres li{padding:.4rem 0;border-top:1px solid #ccc;line-height:1.45;display:grid}
+#fres a{font-weight:bold}
+.find-d,.find-n{font-size:.8rem;font-style:italic}
+.find-s{font-size:.85rem}
+#fres mark{background:var(--gold);color:#000}
+@media (max-width:420px){.find-date{grid-template-columns:1fr 1fr}}
 .views{font-size:.9rem;color:var(--cream);opacity:.85}
 .views[hidden]{display:none}
 .edition{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .5rem;border-radius:2px}
@@ -84,6 +101,73 @@ h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
   }).catch(function(){});
 })();
 </script><nav><a href="../index.html">Latest</a><a href="../archive/index.html">Archive</a><a href="../archive/2026-11-09.html">← Previous</a><a href="../archive/2026-11-10.html">Next →</a></nav>
+<details class="find" data-prefix="../"><summary>Find a brief</summary>
+<div class="find-in">
+<form class="find-date" onsubmit="return false">
+<label><span>Year</span><select id="fy" aria-label="Year"></select></label>
+<label><span>Month</span><select id="fm" aria-label="Month"></select></label>
+<label><span>Day</span><select id="fd" aria-label="Day"></select></label>
+<button type="button" id="fgo">Open</button>
+</form>
+<form class="find-q" role="search" onsubmit="return false">
+<input id="fq" type="search" placeholder="Search all briefs, e.g. Solomon Islands" aria-label="Search all briefs" autocomplete="off" enterkeyhint="search">
+</form>
+<div id="fres" aria-live="polite"></div>
+</div></details>
+<script>
+(() => {
+  const box = document.querySelector("details.find"), P = box.dataset.prefix;
+  const $ = id => document.getElementById(id);
+  const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  let eds = null;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const url = e => P + "archive/" + e.id + ".html";
+  function opts(sel, items, keep){
+    sel.innerHTML = items.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join("");
+    if (keep && items.some(([v]) => v === keep)) sel.value = keep;
+  }
+  function fillMonths(){
+    const y = $("fy").value, ms = [...new Set(eds.filter(e => e.date.startsWith(y)).map(e => e.date.slice(5, 7)))].sort().reverse();
+    opts($("fm"), ms.map(m => [m, MONTHS[+m - 1]]), $("fm").value); fillDays();
+  }
+  function fillDays(){
+    const pre = $("fy").value + "-" + $("fm").value;
+    const ds = eds.filter(e => e.date.startsWith(pre)).sort((a, b) => b.id.localeCompare(a.id));
+    opts($("fd"), ds.map(e => [e.id, new Date(e.date + "T12:00").toLocaleDateString("en-AU", {weekday: "short", day: "numeric"}) + (e.edition ? " · " + e.edition : "")]));
+  }
+  async function load(){
+    if (eds) return;
+    try { eds = await (await fetch(P + "editions.json")).json(); } catch (e) { $("fres").textContent = "Couldn't load the list of briefs."; return; }
+    const ys = [...new Set(eds.map(e => e.date.slice(0, 4)))].sort().reverse();
+    opts($("fy"), ys.map(y => [y, y])); fillMonths();
+  }
+  box.addEventListener("toggle", () => { if (box.open) load(); });
+  $("fy").addEventListener("change", fillMonths);
+  $("fm").addEventListener("change", fillDays);
+  $("fgo").addEventListener("click", () => { const e = eds && eds.find(x => x.id === $("fd").value); if (e) location.href = url(e); });
+  let t;
+  $("fq").addEventListener("input", () => { clearTimeout(t); t = setTimeout(search, 250); });
+  async function search(){
+    await load(); if (!eds) return;
+    const q = $("fq").value.trim().toLowerCase(), words = q.split(/\s+/).filter(w => w.length > 1);
+    if (!words.length) { $("fres").innerHTML = ""; return; }
+    const hits = [];
+    for (const e of eds) for (const s of e.stories) {
+      const hay = (s.t + " " + s.x).toLowerCase();
+      if (!words.every(w => hay.includes(w))) continue;
+      const score = words.filter(w => s.t.toLowerCase().includes(w)).length * 3 + (hay.includes(q) ? 2 : 0);
+      hits.push({e, s, score});
+    }
+    hits.sort((a, b) => b.score - a.score || b.e.id.localeCompare(a.e.id));
+    const mark = txt => { let h = esc(txt); for (const w of words) h = h.replace(new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "gi"), "<mark>$1</mark>"); return h; };
+    const snip = x => { const i = x.toLowerCase().indexOf(words[0]); const a = Math.max(0, i - 70); return (a ? "…" : "") + x.slice(a, a + 200) + "…"; };
+    $("fres").innerHTML = hits.length
+      ? `<p class="find-n">${hits.length} result${hits.length === 1 ? "" : "s"}</p><ul>` + hits.slice(0, 40).map(h =>
+          `<li><a href="${url(h.e)}">${mark(h.s.t)}</a><span class="find-d">${esc(new Date(h.e.date + "T12:00").toLocaleDateString("en-AU", {day: "numeric", month: "short", year: "numeric"}))}${h.e.edition ? " · " + esc(h.e.edition) : ""}</span><span class="find-s">${mark(snip(h.s.x))}</span></li>`).join("") + "</ul>"
+      : '<p class="find-n">No briefs mention that yet.</p>';
+  }
+})();
+</script>
 </div></header>
 <main class="wrap">
 <section class="bluf"><span class="label">Bottom line up front</span><ol><li><strong>Iran talks reach a decision point.</strong> Trump meets Qatar&#x27;s PM at the White House (about 4am Tuesday AEDT). Araghchi says it is Washington&#x27;s turn to choose between his &quot;two-day&quot; Hormuz plan and war. Rubio calls Iran&#x27;s demands &quot;simply unacceptable&quot;.</li><li><strong>The Saudi–Houthi war is the second Gulf front to watch.</strong> The Houthis say a Saudi strike killed 33 in a village near Sanaa. Missiles aimed at Riyadh and the Eastern Province were intercepted, and debris damaged Aramco Tower. Both threaten the routes oil uses to bypass Hormuz.</li><li>Russia keeps hitting Ukraine&#x27;s grid before the <strong>Abu Dhabi talks (10–11 Nov)</strong>. Zelensky says North Korean <strong>KN-23</strong> missiles hit a key energy site. China says its new <strong>DF-61 ICBM</strong> is already in routine training.</li></ol></section>

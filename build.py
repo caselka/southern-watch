@@ -29,6 +29,23 @@ a:focus-visible{outline:2px solid #000;outline-offset:2px}
 .mast nav a:hover{color:var(--gold)}
 .dateline{font-style:italic;font-size:.95rem;color:var(--cream)}
 .byline{font-size:.85rem;letter-spacing:.06em;color:var(--gold)}
+.find{width:100%;max-width:30rem;text-align:left;font-size:.95rem}
+.find summary{cursor:pointer;color:var(--gold);text-align:center;list-style:none;font-weight:bold}
+.find summary::-webkit-details-marker{display:none}
+.find summary::after{content:" ▾"}
+.find[open] summary::after{content:" ▴"}
+.find-in{display:grid;gap:.5rem;margin-top:.5rem;background:#fff;color:#000;border-radius:6px;padding:.7rem}
+.find-date{display:grid;grid-template-columns:1fr 1.3fr 1.3fr auto;gap:.4rem;align-items:end}
+.find-date label{display:grid;font-size:.75rem;line-height:1.3}
+.find select,.find input,.find button{font:inherit;font-size:16px;padding:.3rem .4rem;border:1px solid #000;border-radius:4px;background:#fff;color:#000;min-width:0;width:100%}
+.find button{background:var(--navy);color:var(--gold);border-color:var(--navy);font-weight:bold;cursor:pointer}
+#fres ul{list-style:none;margin:0;padding:0;max-height:55vh;overflow-y:auto}
+#fres li{padding:.4rem 0;border-top:1px solid #ccc;line-height:1.45;display:grid}
+#fres a{font-weight:bold}
+.find-d,.find-n{font-size:.8rem;font-style:italic}
+.find-s{font-size:.85rem}
+#fres mark{background:var(--gold);color:#000}
+@media (max-width:420px){.find-date{grid-template-columns:1fr 1fr}}
 .views{font-size:.9rem;color:var(--cream);opacity:.85}
 .views[hidden]{display:none}
 .edition{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .5rem;border-radius:2px}
@@ -151,6 +168,74 @@ EXPLAIN_JS = r"""<div id="xbtn" hidden><button type="button">Explain</button></d
 })();
 </script>"""
 
+FIND_HTML = r"""<details class="find" data-prefix="{prefix}"><summary>Find a brief</summary>
+<div class="find-in">
+<form class="find-date" onsubmit="return false">
+<label><span>Year</span><select id="fy" aria-label="Year"></select></label>
+<label><span>Month</span><select id="fm" aria-label="Month"></select></label>
+<label><span>Day</span><select id="fd" aria-label="Day"></select></label>
+<button type="button" id="fgo">Open</button>
+</form>
+<form class="find-q" role="search" onsubmit="return false">
+<input id="fq" type="search" placeholder="Search all briefs, e.g. Solomon Islands" aria-label="Search all briefs" autocomplete="off" enterkeyhint="search">
+</form>
+<div id="fres" aria-live="polite"></div>
+</div></details>
+<script>
+(() => {
+  const box = document.querySelector("details.find"), P = box.dataset.prefix;
+  const $ = id => document.getElementById(id);
+  const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  let eds = null;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const url = e => P + "archive/" + e.id + ".html";
+  function opts(sel, items, keep){
+    sel.innerHTML = items.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join("");
+    if (keep && items.some(([v]) => v === keep)) sel.value = keep;
+  }
+  function fillMonths(){
+    const y = $("fy").value, ms = [...new Set(eds.filter(e => e.date.startsWith(y)).map(e => e.date.slice(5, 7)))].sort().reverse();
+    opts($("fm"), ms.map(m => [m, MONTHS[+m - 1]]), $("fm").value); fillDays();
+  }
+  function fillDays(){
+    const pre = $("fy").value + "-" + $("fm").value;
+    const ds = eds.filter(e => e.date.startsWith(pre)).sort((a, b) => b.id.localeCompare(a.id));
+    opts($("fd"), ds.map(e => [e.id, new Date(e.date + "T12:00").toLocaleDateString("en-AU", {weekday: "short", day: "numeric"}) + (e.edition ? " · " + e.edition : "")]));
+  }
+  async function load(){
+    if (eds) return;
+    try { eds = await (await fetch(P + "editions.json")).json(); } catch (e) { $("fres").textContent = "Couldn't load the list of briefs."; return; }
+    const ys = [...new Set(eds.map(e => e.date.slice(0, 4)))].sort().reverse();
+    opts($("fy"), ys.map(y => [y, y])); fillMonths();
+  }
+  box.addEventListener("toggle", () => { if (box.open) load(); });
+  $("fy").addEventListener("change", fillMonths);
+  $("fm").addEventListener("change", fillDays);
+  $("fgo").addEventListener("click", () => { const e = eds && eds.find(x => x.id === $("fd").value); if (e) location.href = url(e); });
+  let t;
+  $("fq").addEventListener("input", () => { clearTimeout(t); t = setTimeout(search, 250); });
+  async function search(){
+    await load(); if (!eds) return;
+    const q = $("fq").value.trim().toLowerCase(), words = q.split(/\s+/).filter(w => w.length > 1);
+    if (!words.length) { $("fres").innerHTML = ""; return; }
+    const hits = [];
+    for (const e of eds) for (const s of e.stories) {
+      const hay = (s.t + " " + s.x).toLowerCase();
+      if (!words.every(w => hay.includes(w))) continue;
+      const score = words.filter(w => s.t.toLowerCase().includes(w)).length * 3 + (hay.includes(q) ? 2 : 0);
+      hits.push({e, s, score});
+    }
+    hits.sort((a, b) => b.score - a.score || b.e.id.localeCompare(a.e.id));
+    const mark = txt => { let h = esc(txt); for (const w of words) h = h.replace(new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "gi"), "<mark>$1</mark>"); return h; };
+    const snip = x => { const i = x.toLowerCase().indexOf(words[0]); const a = Math.max(0, i - 70); return (a ? "…" : "") + x.slice(a, a + 200) + "…"; };
+    $("fres").innerHTML = hits.length
+      ? `<p class="find-n">${hits.length} result${hits.length === 1 ? "" : "s"}</p><ul>` + hits.slice(0, 40).map(h =>
+          `<li><a href="${url(h.e)}">${mark(h.s.t)}</a><span class="find-d">${esc(new Date(h.e.date + "T12:00").toLocaleDateString("en-AU", {day: "numeric", month: "short", year: "numeric"}))}${h.e.edition ? " · " + esc(h.e.edition) : ""}</span><span class="find-s">${mark(snip(h.s.x))}</span></li>`).join("") + "</ul>"
+      : '<p class="find-n">No briefs mention that yet.</p>';
+  }
+})();
+</script>"""
+
 FONTS = ""  # Times New Roman is a system font: nothing to load
 
 NOTE = ("State media (Global Times, Xinhua, TASS, Tehran Times, IRNA, KCNA) show each government's "
@@ -210,6 +295,7 @@ def page(title, mast_extra, body, prefix):
 <a href="{prefix}index.html" aria-label="Southern Watch home"><img src="{prefix}assets/logo.png" alt="Southern Watch: geopolitics from Australia's angle" width="640" height="591"></a>
 <span class="byline">Created by Caselka</span>
 {mast_extra}
+{FIND_HTML.replace("{prefix}", prefix)}
 </div></header>
 <main class="wrap">
 {body}
@@ -291,6 +377,19 @@ def render_archive(editions):
     return page("Southern Watch Archive", mast, f'<ul class="archive">{"".join(items)}</ul>', "../")
 
 
+def search_index(editions):
+    """Small list of every edition for the header's date picker and search (text trimmed to keep it light)."""
+    plain = lambda t: re.sub(r"\s+", " ", re.sub(r"\*\*|^- ", "", str(t), flags=re.M)).strip()
+    out = []
+    for eid, b in editions:
+        stories = [{"t": plain(st["title"]),
+                    "x": plain(" ".join([st.get("region", ""), st.get("lens_actor", ""), st.get("what_happened", ""),
+                                         st.get("why_australia", "")]))[:900]} for st in b["stories"]]
+        stories.append({"t": "Bottom line up front", "x": plain(" ".join(b["bluf"]))[:900]})
+        out.append({"id": eid, "date": b["date"], "edition": b.get("edition", ""), "stories": stories})
+    return out
+
+
 def main():
     files = sorted(DATA.glob("*.json"), key=lambda f: f.stem)
     editions = [(f.stem, json.loads(f.read_text(encoding="utf-8"))) for f in files]
@@ -305,6 +404,8 @@ def main():
     latest_id, latest = editions[-1]
     (DOCS / "index.html").write_text(render_brief(latest, latest_id, ids[-2] if len(ids) > 1 else None, None, ""), encoding="utf-8")
     (DOCS / "archive" / "index.html").write_text(render_archive(editions), encoding="utf-8")
+    (DOCS / "editions.json").write_text(json.dumps(search_index(editions), ensure_ascii=False, separators=(",", ":")),
+                                        encoding="utf-8")
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")
     old_favicon = DOCS / "favicon.svg"
     if old_favicon.exists():
