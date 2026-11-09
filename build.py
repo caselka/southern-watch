@@ -28,6 +28,7 @@ a:focus-visible{outline:2px solid #000;outline-offset:2px}
 .mast nav a{color:var(--cream)}
 .mast nav a:hover{color:var(--gold)}
 .dateline{font-style:italic;font-size:.95rem;color:var(--cream)}
+.byline{font-size:.85rem;letter-spacing:.06em;color:var(--gold)}
 .views{font-size:.9rem;color:var(--cream);opacity:.85}
 .views[hidden]{display:none}
 .edition{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .5rem;border-radius:2px}
@@ -207,6 +208,7 @@ def page(title, mast_extra, body, prefix):
 <body>
 <header class="mast"><div class="mast-in">
 <a href="{prefix}index.html" aria-label="Southern Watch home"><img src="{prefix}assets/logo.png" alt="Southern Watch: geopolitics from Australia's angle" width="640" height="591"></a>
+<span class="byline">Created by Caselka</span>
 {mast_extra}
 </div></header>
 <main class="wrap">
