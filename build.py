@@ -28,6 +28,8 @@ a:focus-visible{outline:2px solid #000;outline-offset:2px}
 .mast nav a{color:var(--cream)}
 .mast nav a:hover{color:var(--gold)}
 .dateline{font-style:italic;font-size:.95rem;color:var(--cream)}
+.views{font-size:.9rem;color:var(--cream);opacity:.85}
+.views[hidden]{display:none}
 .edition{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .5rem;border-radius:2px}
 .wrap{max-width:44rem;margin:0 auto;padding-block:1.5rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
@@ -122,6 +124,27 @@ def page(title, mast_extra, body, prefix):
 """
 
 
+COUNTER_NS = "caselka-southern-watch"
+
+
+def views(eid):
+    """'Viewed by N readers' - counts each browser once per edition (abacus.jasoncameron.dev, no cookies)."""
+    return f"""<span class="views" id="views" hidden></span>
+<script>
+(function(){{
+  var key = "{eid}", el = document.getElementById("views"), seen = false;
+  try {{ seen = localStorage.getItem("sw-seen-" + key) === "1"; }} catch (e) {{}}
+  var url = "https://abacus.jasoncameron.dev/" + (seen ? "get" : "hit") + "/{COUNTER_NS}/" + key;
+  fetch(url).then(function(r){{ return r.json(); }}).then(function(d){{
+    if (typeof d.value !== "number") return;
+    try {{ localStorage.setItem("sw-seen-" + key, "1"); }} catch (e) {{}}
+    el.textContent = "Viewed by " + d.value.toLocaleString("en-AU") + (d.value === 1 ? " reader" : " readers");
+    el.hidden = false;
+  }}).catch(function(){{}});
+}})();
+</script>"""
+
+
 def nav(prefix, prev_id, next_id):
     links = [f'<a href="{prefix}index.html">Latest</a>', f'<a href="{prefix}archive/index.html">Archive</a>']
     if prev_id:
@@ -131,10 +154,10 @@ def nav(prefix, prev_id, next_id):
     return f"<nav>{''.join(links)}</nav>"
 
 
-def render_brief(b, prev_id, next_id, prefix):
+def render_brief(b, eid, prev_id, next_id, prefix):
     d = date.fromisoformat(b["date"])
     edition = f'<span class="edition">{esc(b["edition"])}</span>' if b.get("edition") else ""
-    mast = f'<span class="dateline">{esc(dateline(d))}</span>{edition}{nav(prefix, prev_id, next_id)}'
+    mast = f'<span class="dateline">{esc(dateline(d))}</span>{edition}{views(eid)}{nav(prefix, prev_id, next_id)}'
 
     parts = ['<section class="bluf"><span class="label">Bottom line up front</span><ol>'
              + "".join(f"<li>{inline(x)}</li>" for x in b["bluf"]) + "</ol></section>"]
@@ -182,9 +205,9 @@ def main():
     for i, (eid, b) in enumerate(editions):
         prev_id = ids[i - 1] if i > 0 else None
         next_id = ids[i + 1] if i + 1 < len(ids) else None
-        (DOCS / "archive" / f"{eid}.html").write_text(render_brief(b, prev_id, next_id, "../"), encoding="utf-8")
+        (DOCS / "archive" / f"{eid}.html").write_text(render_brief(b, eid, prev_id, next_id, "../"), encoding="utf-8")
     latest_id, latest = editions[-1]
-    (DOCS / "index.html").write_text(render_brief(latest, ids[-2] if len(ids) > 1 else None, None, ""), encoding="utf-8")
+    (DOCS / "index.html").write_text(render_brief(latest, latest_id, ids[-2] if len(ids) > 1 else None, None, ""), encoding="utf-8")
     (DOCS / "archive" / "index.html").write_text(render_archive(editions), encoding="utf-8")
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")
     old_favicon = DOCS / "favicon.svg"

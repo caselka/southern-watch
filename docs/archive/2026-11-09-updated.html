@@ -23,6 +23,8 @@ a:focus-visible{outline:2px solid #000;outline-offset:2px}
 .mast nav a{color:var(--cream)}
 .mast nav a:hover{color:var(--gold)}
 .dateline{font-style:italic;font-size:.95rem;color:var(--cream)}
+.views{font-size:.9rem;color:var(--cream);opacity:.85}
+.views[hidden]{display:none}
 .edition{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .5rem;border-radius:2px}
 .wrap{max-width:44rem;margin:0 auto;padding-block:1.5rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
@@ -53,7 +55,20 @@ h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
 <body>
 <header class="mast"><div class="mast-in">
 <a href="../index.html" aria-label="Southern Watch home"><img src="../assets/logo.png" alt="Southern Watch: geopolitics from Australia's angle" width="640" height="591"></a>
-<span class="dateline">Monday 9 November 2026 · Sydney</span><span class="edition">Updated sources</span><nav><a href="../index.html">Latest</a><a href="../archive/index.html">Archive</a><a href="../archive/2026-11-09.html">← Previous</a></nav>
+<span class="dateline">Monday 9 November 2026 · Sydney</span><span class="edition">Updated sources</span><span class="views" id="views" hidden></span>
+<script>
+(function(){
+  var key = "2026-11-09-updated", el = document.getElementById("views"), seen = false;
+  try { seen = localStorage.getItem("sw-seen-" + key) === "1"; } catch (e) {}
+  var url = "https://abacus.jasoncameron.dev/" + (seen ? "get" : "hit") + "/caselka-southern-watch/" + key;
+  fetch(url).then(function(r){ return r.json(); }).then(function(d){
+    if (typeof d.value !== "number") return;
+    try { localStorage.setItem("sw-seen-" + key, "1"); } catch (e) {}
+    el.textContent = "Viewed by " + d.value.toLocaleString("en-AU") + (d.value === 1 ? " reader" : " readers");
+    el.hidden = false;
+  }).catch(function(){});
+})();
+</script><nav><a href="../index.html">Latest</a><a href="../archive/index.html">Archive</a><a href="../archive/2026-11-09.html">← Previous</a></nav>
 </div></header>
 <main class="wrap">
 <section class="bluf"><span class="label">Bottom line up front</span><ol><li><strong>Iran talks reach a decision point.</strong> Trump meets Qatar&#x27;s PM at the White House (about 4am Tuesday AEDT). Araghchi says it is Washington&#x27;s turn to choose between his &quot;two-day&quot; Hormuz plan and war. Rubio calls Iran&#x27;s demands &quot;simply unacceptable&quot;.</li><li><strong>The Saudi–Houthi war is the second Gulf front to watch.</strong> The Houthis say a Saudi strike killed 33 in a village near Sanaa. Missiles aimed at Riyadh and the Eastern Province were intercepted, and debris damaged Aramco Tower. Both threaten the routes oil uses to bypass Hormuz.</li><li>Russia keeps hitting Ukraine&#x27;s grid before the <strong>Abu Dhabi talks (10–11 Nov)</strong>. Zelensky says North Korean <strong>KN-23</strong> missiles hit a key energy site. China says its new <strong>DF-61 ICBM</strong> is already in routine training.</li></ol></section>
