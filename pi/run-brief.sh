@@ -24,7 +24,7 @@ fi
 PROMPT=$(sed -e "s/{{DATE}}/$DATE/g" -e "s/{{DATE_LONG}}/$DATE_LONG/g" pi/prompt.md)
 
 timeout 40m claude -p "$PROMPT" \
-  --allowedTools "WebSearch" "WebFetch" "Write(data/$DATE.json)" \
+  --allowedTools "WebSearch" "WebFetch" "Edit(data/**)" \
   --max-turns 80 \
   --output-format text </dev/null | tail -20
 
