@@ -41,7 +41,7 @@ fi
 echo "digests used: $(find "$HIST" -name '*.md' -mmin -1500 2>/dev/null | wc -l)"
 PROMPT="${PROMPT//\{\{DIGESTS\}\}/$DIGESTS}"
 
-timeout 40m claude -p "$PROMPT" \
+timeout 40m claude -p "$PROMPT" --permission-mode default \
   --allowedTools "WebSearch" "WebFetch" "Edit(data/**)" \
   --max-turns 80 \
   --output-format text </dev/null | tail -20
