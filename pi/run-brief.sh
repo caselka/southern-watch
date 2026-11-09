@@ -14,6 +14,9 @@ mkdir -p "$LOG_DIR"
 exec >>"$LOG_DIR/$DATE.log" 2>&1
 echo "=== start $(date)"
 
+# Push a phone alert if any step fails (needs /usr/local/bin/notify; skipped if absent)
+trap 'command -v notify >/dev/null && notify "Southern Watch failed" "Brief for $DATE did not publish. See ~/brief-logs/$DATE.log on the Pi." 4 warning' ERR
+
 git pull -q --rebase
 
 if [ -f "$OUT" ]; then
@@ -35,6 +38,12 @@ git add data docs
 git commit -q -m "Brief for $DATE"
 git push -q
 echo "=== published $(date)"
+if command -v notify >/dev/null; then
+  BLUF=$(python3 -c "import json,re;b=json.load(open('$OUT'));print(re.sub(r'\*\*','',b['bluf'][0]))")
+  curl -fsS -H "Title: Southern Watch $DATE" -H "Tags: newspaper" \
+    -H "Click: https://caselka.github.io/southern-watch/" \
+    -d "$BLUF" "https://ntfy.sh/$(cat /etc/ntfy-topic)" >/dev/null || true
+fi
 
 # Keep 60 days of logs
 find "$LOG_DIR" -name '*.log' -mtime +60 -delete
