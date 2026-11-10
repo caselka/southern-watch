@@ -92,6 +92,9 @@ h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
 .xfoot button[hidden]{display:none}
 .share{font-size:.9rem;display:flex;flex-wrap:wrap;gap:0 1rem}
 .share a{font-weight:bold}
+.story .meta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.3rem 1rem;margin-bottom:.5rem}
+.sharebtn{font-style:normal;font-weight:bold;font-size:.9rem;line-height:1;white-space:nowrap;background:var(--navy);color:var(--gold);text-decoration:none;border-radius:999px;padding:.6rem 1rem}
+.sharebtn:hover{background:#000}
 .follow{font-size:.9rem;font-style:italic;padding-top:1rem}
 """
 
@@ -398,7 +401,7 @@ def render_story(s, slug, prefix):
         f'<span class="tag">Confidence: {esc(s["confidence"]).lower()}</span>']
     srcs = "".join(f'<a href="{safe_url(x["url"])}" rel="noopener">{esc(x["label"])}</a>' for x in s["sources"])
     return f"""<article class="story" id="{slug}">
-<div class="meta">{''.join(tags)}</div>
+<div class="meta"><span>{''.join(tags)}</span><a class="sharebtn" href="{prefix}story/{slug}.html" data-share="{esc(plain(s['title']))}">Share this story</a></div>
 <h2>{inline(s['title'])}</h2>
 <div class="block"><span class="label">What happened</span>{prose(s['what_happened'])}</div>
 <div class="block"><span class="label">Why it matters for Australia</span>{prose(s['why_australia'])}</div>
