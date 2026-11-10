@@ -6,12 +6,16 @@ Each JSON file is one edition. The file name (without .json) is the edition id, 
 import html
 import json
 import re
-from datetime import date
+from datetime import date, datetime, time
+from email.utils import format_datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 DOCS = ROOT / "docs"
+SITE = "https://caselka.github.io/southern-watch/"  # public address; change here if the site moves to its own domain
+TAGLINE = "A daily foreign and security brief from an Australian angle, with how Beijing, Moscow, Tehran and Pyongyang frame each story."
 
 CSS = """
 /* Navy masthead with the logo, then a plain document: white page, black Times New Roman, double-spaced */
@@ -86,6 +90,9 @@ h2{font-size:1.4rem;font-weight:bold;margin:0;line-height:1.4;text-wrap:balance}
 .xfoot{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap;border-top:1px solid #000;padding:.45rem .9rem;font-size:.8rem;font-style:italic}
 .xfoot button{font:inherit;font-style:normal;font-weight:bold;background:var(--gold);color:var(--navy);border:0;border-radius:4px;padding:.3rem .6rem;cursor:pointer}
 .xfoot button[hidden]{display:none}
+.share{font-size:.9rem;display:flex;flex-wrap:wrap;gap:0 1rem}
+.share a{font-weight:bold}
+.follow{font-size:.9rem;font-style:italic;padding-top:1rem}
 """
 
 EXPLAIN_JS = r"""<div id="xbtn" hidden><button type="button">Explain</button></div>
@@ -269,6 +276,29 @@ def prose(s):
     return "".join(out)
 
 
+def plain(t):
+    """Text with the **bold** and '- ' bullet marks removed, on one line."""
+    return re.sub(r"\s+", " ", re.sub(r"\*\*|^- ", "", str(t), flags=re.M)).strip()
+
+
+def clip(t, n):
+    t = plain(t)
+    return t if len(t) <= n else t[:n - 1].rsplit(" ", 1)[0] + "…"
+
+
+def story_slugs(eid, b):
+    """Stable file name for each story's own page: <edition>-<words-from-the-title>."""
+    out, seen = [], set()
+    for st in b["stories"]:
+        slug = re.sub(r"[^a-z0-9]+", "-", plain(st["title"]).lower()).strip("-")[:60].rstrip("-") or "story"
+        base, n = slug, 2
+        while slug in seen:
+            slug, n = f"{base}-{n}", n + 1
+        seen.add(slug)
+        out.append(f"{eid}-{slug}")
+    return out
+
+
 def safe_url(u):
     return esc(u) if str(u).startswith(("https://", "http://")) else "#"
 
@@ -277,7 +307,20 @@ def dateline(d: date):
     return f"{d:%A} {d.day} {d:%B %Y} · Sydney"
 
 
-def page(title, mast_extra, body, prefix):
+SHARE_JS = """<script>
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[data-share]"); if (!a) return;
+  e.preventDefault();
+  const d = {title: a.dataset.share, url: a.href};
+  if (navigator.share) { navigator.share(d).catch(() => {}); return; }
+  const done = t => { const o = a.textContent; a.textContent = t; setTimeout(() => { a.textContent = o; }, 2000); };
+  navigator.clipboard ? navigator.clipboard.writeText(d.url).then(() => done("Link copied"), () => { location.href = d.url; }) : (location.href = d.url);
+});
+</script>"""
+
+
+def page(title, mast_extra, body, prefix, desc=TAGLINE, path="", kind="website"):
+    """path = this page's address under SITE; desc = the line shown when the link is shared."""
     return f"""<!doctype html>
 <html lang="en-AU">
 <head>
@@ -285,6 +328,18 @@ def page(title, mast_extra, body, prefix):
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0f1b2d">
 <title>{esc(title)}</title>
+<meta name="description" content="{esc(desc)}">
+<link rel="canonical" href="{SITE}{path}">
+<meta property="og:site_name" content="Southern Watch">
+<meta property="og:type" content="{kind}">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(desc)}">
+<meta property="og:url" content="{SITE}{path}">
+<meta property="og:image" content="{SITE}assets/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Southern Watch" href="{SITE}feed.xml">
 <link rel="icon" href="{prefix}assets/icon-64.png" type="image/png">
 <link rel="apple-touch-icon" href="{prefix}assets/icon-180.png">
 {FONTS}
@@ -300,6 +355,7 @@ def page(title, mast_extra, body, prefix):
 <main class="wrap">
 {body}
 </main>
+{SHARE_JS}
 {EXPLAIN_JS}
 </body>
 </html>
@@ -336,19 +392,12 @@ def nav(prefix, prev_id, next_id):
     return f"<nav>{''.join(links)}</nav>"
 
 
-def render_brief(b, eid, prev_id, next_id, prefix):
-    d = date.fromisoformat(b["date"])
-    edition = f'<span class="edition">{esc(b["edition"])}</span>' if b.get("edition") else ""
-    mast = f'<span class="dateline">{esc(dateline(d))}</span>{edition}{views(eid)}{nav(prefix, prev_id, next_id)}'
-
-    parts = ['<section class="bluf"><span class="label">Bottom line up front</span><ol>'
-             + "".join(f"<li>{inline(x)}</li>" for x in b["bluf"]) + "</ol></section>"]
-    for s in b["stories"]:
-        tags = (['<span class="tag hi">Priority</span>'] if s.get("priority") else []) + [
-            f'<span class="tag">{esc(s["region"]).title()}</span>',
-            f'<span class="tag">Confidence: {esc(s["confidence"]).lower()}</span>']
-        srcs = "".join(f'<a href="{safe_url(x["url"])}" rel="noopener">{esc(x["label"])}</a>' for x in s["sources"])
-        parts.append(f"""<article class="story">
+def render_story(s, slug, prefix):
+    tags = (['<span class="tag hi">Priority</span>'] if s.get("priority") else []) + [
+        f'<span class="tag">{esc(s["region"]).title()}</span>',
+        f'<span class="tag">Confidence: {esc(s["confidence"]).lower()}</span>']
+    srcs = "".join(f'<a href="{safe_url(x["url"])}" rel="noopener">{esc(x["label"])}</a>' for x in s["sources"])
+    return f"""<article class="story" id="{slug}">
 <div class="meta">{''.join(tags)}</div>
 <h2>{inline(s['title'])}</h2>
 <div class="block"><span class="label">What happened</span>{prose(s['what_happened'])}</div>
@@ -356,13 +405,38 @@ def render_brief(b, eid, prev_id, next_id, prefix):
 <div class="lens"><span class="label">State media framing · {esc(s['lens_actor'])}</span>{prose(s.get('state_media_framing') or s.get('adversary_lens', ''))}</div>
 <div class="angle"><span class="label">Angle to build</span>{prose(s['angle'])}</div>
 <div class="src">{srcs}</div>
-</article>""")
+<div class="share"><a href="{prefix}story/{slug}.html" data-share="{esc(plain(s['title']))}">Share this story</a></div>
+</article>"""
+
+
+def render_story_page(b, eid, s, slug):
+    """One story on its own page, so a single item can be linked and shows a proper preview when shared."""
+    d = date.fromisoformat(b["date"])
+    mast = (f'<span class="dateline">{esc(dateline(d))}</span>'
+            f'<nav><a href="../archive/{eid}.html">Full brief for {d.day} {d:%B}</a><a href="../index.html">Latest</a>'
+            f'<a href="../archive/index.html">Archive</a></nav>')
+    body = (render_story(s, slug, "../")
+            + f'<p class="follow">From the Southern Watch daily brief. <a href="../archive/{eid}.html">Read the rest of '
+              f'{d:%A}\'s brief</a> or <a href="../feed.xml">follow by RSS</a>.</p><p class="note">{NOTE}</p>')
+    return page(f"{plain(s['title'])} · Southern Watch", mast, body, "../",
+                desc=clip(s["why_australia"], 200), path=f"story/{slug}.html", kind="article")
+
+
+def render_brief(b, eid, prev_id, next_id, prefix, path=""):
+    d = date.fromisoformat(b["date"])
+    edition = f'<span class="edition">{esc(b["edition"])}</span>' if b.get("edition") else ""
+    mast = f'<span class="dateline">{esc(dateline(d))}</span>{edition}{views(eid)}{nav(prefix, prev_id, next_id)}'
+
+    parts = ['<section class="bluf"><span class="label">Bottom line up front</span><ol>'
+             + "".join(f"<li>{inline(x)}</li>" for x in b["bluf"]) + "</ol></section>"]
+    for s, slug in zip(b["stories"], story_slugs(eid, b)):
+        parts.append(render_story(s, slug, prefix))
     rows = "".join(f"<tr><td>{esc(w['when'])}</td><td>{inline(w['what'])}</td></tr>" for w in b["watch_list"])
     parts.append(f'<section class="story"><span class="label">Watch list</span>'
                  f'<div class="tablewrap"><table class="cal">{rows}</table></div>'
                  f'<p class="note">{NOTE}</p></section>')
     title = f"Southern Watch · {d.day} {d:%b %Y}" + (f" · {b['edition']}" if b.get("edition") else "")
-    return page(title, mast, "\n".join(parts), prefix)
+    return page(title, mast, "\n".join(parts), prefix, desc=clip(b["bluf"][0], 200) if b["bluf"] else TAGLINE, path=path)
 
 
 def render_archive(editions):
@@ -374,12 +448,11 @@ def render_archive(editions):
         items.append(f'<li><a href="{eid}.html">{d:%A} {d.day} {d:%B %Y}</a>{badge}'
                      f'<span class="note">{inline(first)}</span></li>')
     mast = '<span class="dateline">All briefs</span><nav><a href="../index.html">Latest</a></nav>'
-    return page("Southern Watch Archive", mast, f'<ul class="archive">{"".join(items)}</ul>', "../")
+    return page("Southern Watch Archive", mast, f'<ul class="archive">{"".join(items)}</ul>', "../", path="archive/index.html")
 
 
 def search_index(editions):
     """Small list of every edition for the header's date picker and search (text trimmed to keep it light)."""
-    plain = lambda t: re.sub(r"\s+", " ", re.sub(r"\*\*|^- ", "", str(t), flags=re.M)).strip()
     out = []
     for eid, b in editions:
         stories = [{"t": plain(st["title"]),
@@ -390,6 +463,29 @@ def search_index(editions):
     return out
 
 
+def render_feed(editions):
+    """RSS feed with one item per story, newest first (latest edition of each day, last 30 days of briefs)."""
+    by_date = {}
+    for eid, b in editions:
+        by_date[b["date"]] = (eid, b)  # a later edition of the same day replaces the earlier one
+    items = []
+    for day in sorted(by_date, reverse=True)[:30]:
+        eid, b = by_date[day]
+        when = format_datetime(datetime.combine(date.fromisoformat(day), time(6, 40), ZoneInfo("Australia/Sydney")))
+        for s, slug in zip(b["stories"], story_slugs(eid, b)):
+            url = f"{SITE}story/{slug}.html"
+            text = (f"<p><strong>What happened</strong></p>{prose(s['what_happened'])}"
+                    f"<p><strong>Why it matters for Australia</strong></p>{prose(s['why_australia'])}"
+                    f'<p><a href="{url}">Read the full story, with state media framing and sources</a></p>')
+            items.append(f"<item><title>{esc(plain(s['title']))}</title><link>{url}</link>"
+                         f'<guid isPermaLink="true">{url}</guid><pubDate>{when}</pubDate>'
+                         f"<category>{esc(s['region'].title())}</category><description>{esc(text)}</description></item>")
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+            f"<title>Southern Watch</title><link>{SITE}</link><description>{esc(TAGLINE)}</description>"
+            f'<language>en-AU</language><atom:link href="{SITE}feed.xml" rel="self" type="application/rss+xml"/>\n'
+            + "\n".join(items) + "\n</channel></rss>\n")
+
+
 def main():
     files = sorted(DATA.glob("*.json"), key=lambda f: f.stem)
     editions = [(f.stem, json.loads(f.read_text(encoding="utf-8"))) for f in files]
@@ -397,15 +493,24 @@ def main():
         raise SystemExit("No briefs in data/")
     (DOCS / "archive").mkdir(parents=True, exist_ok=True)
     ids = [e for e, _ in editions]
+    story_dir, wanted = DOCS / "story", set()
+    story_dir.mkdir(exist_ok=True)
     for i, (eid, b) in enumerate(editions):
         prev_id = ids[i - 1] if i > 0 else None
         next_id = ids[i + 1] if i + 1 < len(ids) else None
-        (DOCS / "archive" / f"{eid}.html").write_text(render_brief(b, eid, prev_id, next_id, "../"), encoding="utf-8")
+        (DOCS / "archive" / f"{eid}.html").write_text(render_brief(b, eid, prev_id, next_id, "../", f"archive/{eid}.html"), encoding="utf-8")
+        for st, slug in zip(b["stories"], story_slugs(eid, b)):
+            (story_dir / f"{slug}.html").write_text(render_story_page(b, eid, st, slug), encoding="utf-8")
+            wanted.add(f"{slug}.html")
     latest_id, latest = editions[-1]
     (DOCS / "index.html").write_text(render_brief(latest, latest_id, ids[-2] if len(ids) > 1 else None, None, ""), encoding="utf-8")
     (DOCS / "archive" / "index.html").write_text(render_archive(editions), encoding="utf-8")
     (DOCS / "editions.json").write_text(json.dumps(search_index(editions), ensure_ascii=False, separators=(",", ":")),
                                         encoding="utf-8")
+    for old in story_dir.glob("*.html"):  # drop pages for stories that no longer exist
+        if old.name not in wanted:
+            old.unlink()
+    (DOCS / "feed.xml").write_text(render_feed(editions), encoding="utf-8")
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")
     old_favicon = DOCS / "favicon.svg"
     if old_favicon.exists():
