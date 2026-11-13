@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-14",
+  "bluf": [
+    "Iran says it destroyed a US radar in Bahrain; CENTCOM says it shot down **two IRGC drones with no damage**. The IRGC also claims a gas carrier hit a mine in Hormuz. Tehran now says any state that sends **naval forces** to back the US, even for freedom of navigation, will be treated as a **participant in the war**.",
+    "Taiwan says China massed **more than 100 military and coast guard vessels** in an unnamed, unannounced exercise in early November. That makes it larger than Justice Mission 2025. It came as Beijing prepares to host APEC, and **Albanese heads to Manila, Shenzhen and Beijing** this week. China's ambassador used The Australian to set out what Beijing expects of him.",
+    "The Ukraine talks will expand, but **nobody agrees on the terms**. The US envoys say Europe is in; Zakharova says the issue \"was not discussed\". Moscow wants the next round to be about **European security architecture**, not territory. Separately, the US won court approval to seize **US$1.2 billion** that North Korea stole from Binance."
+  ],
+  "stories": [
+    {
+      "title": "Iran claims Bahrain radar strike and a Hormuz mine blast, and warns third countries off naval support for the US",
+      "region": "MIDDLE EAST",
+      "priority": true,
+      "confidence": "MODERATE",
+      "what_happened": "- 13 Nov: The IRGC said its Aerospace Force destroyed a US early-warning radar in Bahrain, home of the US Fifth Fleet HQ. It called this retaliation for an air attack on a telecom tower in Sirik, Hormozgan province. It warned of an \"unrestricted response\" if \"violations\" continue (IRNA, Iran International).\n- US Central Command said the IRGC launched two one-way attack drones toward Bahrain and \"both were shot down\", with no injuries or damage. The IRGC radar claim is therefore unconfirmed and disputed.\n- 13 Nov: The IRGC Navy said an unnamed liquefied gas carrier \"ignoring the repeated warnings\" took an \"unauthorized\" route south of the strait, hit a naval mine and exploded. It gave no ship name, flag or casualties. I found no independent confirmation.\n- Iran's Army Navy separately claims it shot down a US MQ-1 drone off Sirik (Mehr). Unconfirmed.\n- 13 Nov: Foreign Ministry spokesman Esmaeil Baqaei said any state giving military, logistical or naval support would be \"held fully responsible for its consequences\". He expressly rejected \"protecting freedom of navigation\" and \"countering piracy\" as cover, and said no bilateral agreement with the US justifies it. He named no country.\n- Context: Trump says he is holding off large-scale strikes because Arab states asked him to, while keeping the naval blockade of Iranian ports.",
+      "why_australia": "Baqaei's warning is aimed at every partner thinking about a Gulf maritime role, which includes Australia. Canberra has already committed an E-7A Wedgetail to the UK- and France-led \"strictly defensive\" Hormuz mission, and Marles has said a warship is possible only once there is a durable ceasefire. Tehran is now saying the legal label on a mission will not protect it. More mine and tanker claims keep insurance and freight costs high on the route that carries refined fuel to Australia via Asian refineries.",
+      "lens_actor": "Tehran",
+      "state_media_framing": "State media present each incident as a measured, legal reply. Mehr says the strait \"is being managed with the supervision of Iranian forces\" and blames the gas carrier for its own fate. IRGC deputy commander Izadi says the \"myth\" that US bases bring security is over and calls the US \"a paper tiger\" (Mehr, Press TV). Tehran Times builds the legal case on UN Charter Article 2(4) and General Assembly Resolution 3314. RT calls the US strike on Sirik \"alleged\", which matches Tehran's line.",
+      "angle": "Iran is trying to collapse the distinction between 'defensive' freedom-of-navigation missions and co-belligerence. Does that distinction still hold in law and in practice? Would an Australian surveillance aircraft feeding a coalition picture already meet Tehran's test?",
+      "sources": [
+        {"label": "Iran International, 13 Nov 2026", "url": "https://www.iranintl.com/en/202611137770"},
+        {"label": "Mehr News, 13 Nov 2026", "url": "https://en.mehrnews.com/news/249367/Liquefied-gas-carrier-blasts-after-hitting-sea-mine-in-Hormuz"},
+        {"label": "Tehran Times, 13 Nov 2026", "url": "https://www.tehrantimes.com/news/532110/Iran-warns-states-against-assisting-US-Israeli-aggression-says"},
+        {"label": "IRNA, 13 Nov 2026", "url": "https://en.irna.ir/news/86320332/IRGC-destroyed-US-early-warning-radar-in-Bahrain"},
+        {"label": "Mehr News (Izadi), 13 Nov 2026", "url": "https://en.mehrnews.com/news/249365/Myth-that-US-military-bases-provide-security-in-region-over"}
+      ]
+    },
+    {
+      "title": "Taiwan says China ran its largest unannounced naval surge yet, with 100-plus vessels, before APEC",
+      "region": "INDO-PACIFIC",
+      "priority": true,
+      "confidence": "MODERATE",
+      "what_happened": "- 13 Nov (Reuters, Taipei): Taiwanese officials said China held a large, unnamed exercise across the western Pacific and around Taiwan in early November. They called it \"silent intimidation\".\n- A Taiwan security official said the PLA and China Coast Guard massed more than 100 vessels at one point. About 70 were still inside the first island chain on Friday 13 Nov. That is a larger naval deployment than \"Justice Mission 2025\", the last named Taiwan drills.\n- Ships came from the Eastern, Northern and Southern Theatre Commands. Officials think the drills rehearsed a blockade and wider western Pacific operations. Taiwan's NSC chief Joseph Wu said groups \"remain operating in waters east of the Philippines\".\n- A Taiwanese official said a Chinese submarine fired an intercontinental-range ballistic missile from the Yellow Sea into mainland China. This is unconfirmed.\n- Defence Minister Wellington Koo described \"area denial\" drills with an aircraft carrier. Beijing called its carrier activity \"routine\" and its defence ministry did not comment.\n- 12 Nov: Xi gave a Taiwan speech urging peaceful \"reunification\" without mentioning force.",
+      "why_australia": "Area-denial rehearsals east of the Philippines and inside the first island chain cover the waters the ADF would operate in during any Taiwan contingency, and the sea lanes that carry Australia's trade to North Asia. The drills had no name, so they produced no announcement, no diplomatic protest cycle and no headlines. That leaves Canberra's leaders free to arrive in Shenzhen without a public crisis on the table. It also makes this a test of whether Australia raises it privately.",
+      "lens_actor": "Beijing",
+      "state_media_framing": "Beijing did not name or publicise the drills; the carrier activity was \"routine\" and \"not directed at any country\". State media are pairing soft and hard messages instead. Xi's speech offered peaceful \"reunification\". Global Times warned Taiwan's ruling party of a \"harsh reckoning\". CGTN ran a Scarborough Shoal heritage series and called a coast guard port call in Penang \"historic\". These items suggest the main message is normalisation, not threat.",
+      "angle": "Unnamed drills let Beijing apply pressure without paying a diplomatic price. Should allies build a habit of publicly naming and counting them, as Taipei now does? Or would that hand Beijing an escalation story on the eve of APEC?",
+      "sources": [
+        {"label": "Reuters via Internazionale, 13 Nov 2026", "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/13/china-stages-unannounced-pacific-drills-in-silent-intimidation-of-taiwan-officials-say"},
+        {"label": "Taipei Times, 14 Nov 2026", "url": "https://www.taipeitimes.com/News/front/archives/2026/11/14/2003867710"},
+        {"label": "CGTN, 12 Nov 2026", "url": "https://news.cgtn.com/news/2026-11-12/China-Coast-Guard-on-historic-visit-to-Malaysia-1S0TSDc7fBC/p.html"},
+        {"label": "CGTN, 13 Nov 2026", "url": "https://news.cgtn.com/news/2026-11-13/Finding-the-Way-to-Huangyan-Dao-1S0R2NsITss/p.html"}
+      ]
+    },
+    {
+      "title": "Albanese heads to Manila, Shenzhen and Beijing as China's ambassador sets out expectations",
+      "region": "INDO-PACIFIC",
+      "priority": false,
+      "confidence": "HIGH",
+      "what_happened": "- PM's office (10 Nov): After COP31 in Antalya, Albanese goes to Manila for the 6th ASEAN–Australia Summit and the East Asia Summit, and meets President Marcos to mark 80 years of relations. He then attends APEC in Shenzhen (18–19 Nov) and the Australia–China Annual Leaders' Meeting with Premier Li in Beijing. It will be his third Beijing trip since 2022.\n- 12 Nov: Ambassador Liu Jinsong published an op-ed in The Australian. ASPI's Geoff Wade summarises it: the relationship \"is at a crossroads\", Australians should see themselves as part of the \"Asia-Pacific family\", and the two countries should deepen cooperation in AI, biotech and clean energy. It casts alliance-based efforts as \"pressure to fall back\".\n- 6 Nov: China Daily ran a piece headlined \"Australia should withdraw from AUKUS\" (headline seen; I did not read the full text).\n- Trump will press ASEAN in Manila to join his \"Pax Silica\" supply-chain campaign (SCMP). Other reports say no framework will be signed at the summit.\n- Xi chairs APEC under the theme \"Building an Asia-Pacific Community to Prosper Together\". Trump and Xi are expected to meet. Beijing says it is in contact about a China–Russia–US leaders' meeting.",
+      "why_australia": "This is the week's main test of Canberra's 'stabilise but don't concede' China policy. Albanese will be in the same rooms as Xi and Trump, after unnamed drills (story 2), an AUKUS inquiry recommending cancelling Pillar One, and an Iran war straining the alliance. Pax Silica makes Southeast Asian states choose on supply chains, and Australia's critical minerals sit in the middle of that.",
+      "lens_actor": "Beijing",
+      "state_media_framing": "Chinese state media do not mention Australia directly this period, apart from Victoria's Chinese community marking Sun Yat-sen's 160th birthday (People's Daily). The APEC messaging is the vehicle: Global Times says China's market is \"setting an example for openness\". CGTN quotes former NZ PM Jenny Shipley calling sideline talks potentially \"historically significant\". Liu's op-ed carries the Australia-specific message. Wade notes it uses \"Asia-Pacific\" throughout and never \"Indo-Pacific\".",
+      "angle": "'Asia-Pacific' versus 'Indo-Pacific' is not just style. Each term draws a different regional map, with different members and different leaders. Watch which term Albanese uses in Shenzhen and Beijing, and what the joint statement says.",
+      "sources": [
+        {"label": "Prime Minister of Australia, 10 Nov 2026", "url": "https://www.pm.gov.au/media/advancing-australias-national-interest"},
+        {"label": "ASPI Strategist, 13 Nov 2026", "url": "https://www.aspistrategist.org.au/chinas-ambassador-tells-australia-what-to-do-again/"},
+        {"label": "China Daily HK, 6 Nov 2026", "url": "https://www.chinadailyhk.com/article/642330"},
+        {"label": "SCMP, 14 Nov 2026", "url": "https://www.scmp.com/news/china/diplomacy/article/3374393/trump-press-southeast-asia-nations-join-pax-silica-asean-summit-manila"},
+        {"label": "CGTN, 12 Nov 2026", "url": "https://news.cgtn.com/news/2026-11-12/China-in-communication-over-Chinese-Russian-US-leaders-meeting-1S0L2hu2ABa/p.html"}
+      ]
+    },
+    {
+      "title": "Ukraine talks to widen, but Moscow and Washington tell different stories about Europe's seat",
+      "region": "EUROPE",
+      "priority": false,
+      "confidence": "MODERATE",
+      "what_happened": "- 10–11 Nov, Abu Dhabi: The first US–Russia–Ukraine trilateral talks since February. The only announced deal was the \"largest prisoner exchange of the war\". Kyiv officials say Russia refused to discuss a ceasefire, territory or energy (Meduza).\n- 12 Nov: Witkoff and Kushner met Putin in Moscow, then Zelensky in Dublin. Putin proposed a joint humanitarian operation in occupied Kostiantynivka. Meduza asks whether it is a cover for resupplying Russian troops.\n- Kushner (via TASS) and Witkoff say Moscow and Kyiv agreed Europeans can join the next round. Moscow's condition is that Europe pick one representative and show \"readiness to contribute\" (Moscow Times). Zakharova says European participation \"was not discussed\" with the envoys. No date for the next round has been published.\n- Ushakov says Putin backs a US idea to settle the war through a future \"European security system\". Ryabkov says the round focused on European security architecture. Kallas calls such talks a \"trap\"; Merz says NATO already fills that role.\n- 12–13 Nov: Russia's MoD says it downed 1,198 Ukrainian drones in one night, with 467 heading for Moscow. Ukrainian strikes killed four at the Volgograd refinery.",
+      "why_australia": "If the talks become a renegotiation of Europe's security order, the precedent matters in Asia: a major power trading a ceasefire for a say over its neighbours' alliances. That is the logic Beijing would want applied to the first island chain. The outcome also decides whether US attention and munitions shift to the Middle East and Indo-Pacific. Australia keeps sanctions and Bushmaster support in place and will need to decide how they fit any deal.",
+      "lens_actor": "Moscow",
+      "state_media_framing": "The Kremlin presents Putin as willing, and Europe as the obstacle. RT runs pieces saying the peace process \"has a Western European problem\" and that EU leaders prolong the war to keep power. TASS plays up EU splits over who should negotiate. Peskov says European troops in Ukraine would mean a larger war. Xinhua relays the Russian line with little comment and asks why Europe \"struggles to secure unified role\".",
+      "angle": "Moscow both accepts European participation and denies discussing it. Is that confusion, or a way to make Europe's entry conditional on accepting a Russian agenda? What does it suggest about how Russia would handle allied 'seats at the table' in other theatres?",
+      "sources": [
+        {"label": "Meduza, 13 Nov 2026", "url": "https://meduza.io/en/feature/2026/11/13/three-days-of-ukraine-peace-talks-from-abu-dhabi-to-moscow-to-dublin-who-met-with-whom-and-what-did-they-actually-agree-on"},
+        {"label": "TASS (Telegram), 13 Nov 2026", "url": "https://t.me/tassagency_en/98616"},
+        {"label": "The Moscow Times, 13 Nov 2026", "url": "https://www.themoscowtimes.com/2026/11/13/russia-says-europeans-can-join-ukraine-peace-talks-if-they-show-readiness-to-contribute-a94236"},
+        {"label": "Kremlin, 13 Nov 2026", "url": "http://en.kremlin.ru/events/president/news/81253"},
+        {"label": "RT, 13 Nov 2026", "url": "https://rt-english.com/news/648787-ukraine-peace-process-problem/"}
+      ]
+    },
+    {
+      "title": "US moves to seize US$1.2 billion of North Korea's Binance haul as Pyongyang rejects the G7",
+      "region": "KOREAN PENINSULA",
+      "priority": false,
+      "confidence": "HIGH",
+      "what_happened": "- 12 Nov (US time): The US Justice Department obtained court authorisation to seize more than US$1.2 billion stolen from Binance. The theft, in late October, totalled about US$6.36 billion, and the DOJ attributes it to North Korean state-sponsored hackers (NK News). Binance says all customer losses have been covered (Yonhap).\n- The DOJ also announced disruption of cloud infrastructure behind a separate operation dubbed \"FaceStealer\". A Seoul court jailed three people for building gambling sites with North Korean cyber actors.\n- 12 Nov: South Korea said the North fired an unidentified projectile toward the sea that evening. No details have been released.\n- 12–13 Nov: Foreign Minister Choe Son Hui rejected the G7 foreign ministers' denuclearisation call as \"vicious criticism\" of the North's \"constitutional rights\". Kim pledged more nuclear weapons at the close of the Party Congress.\n- NK News reports Pyongyang faked its 4 Nov cluster-warhead test using doctored 2022 photos.",
+      "why_australia": "Crypto theft is a main funding stream for North Korea's missile programme. The Binance haul alone is several times its estimated annual arms budget. Australia runs autonomous sanctions on the North and contributes aircraft and ships to monitoring of illicit ship-to-ship transfers. A large seizure shows financial disruption can work. Unknown launches and a growing arsenal raise the stakes for Japan and South Korea, Australia's closest regional partners.",
+      "lens_actor": "Pyongyang",
+      "state_media_framing": "KCNA has not, in the coverage I found, commented on the Binance seizure; Pyongyang usually ignores or denies cyber attribution. Its framing is about status: nuclear weapons are a \"constitutional\" right, and the G7 is the aggressor. KCNA also attacked higher defence spending by the US and its allies on 12 Nov. Available coverage does not say whether Australia was named.",
+      "angle": "Pyongyang now funds itself as much through code as through coal. Should Australia's North Korea policy put cyber and financial disruption ahead of maritime sanctions monitoring, and where would ASD and AUSTRAC fit?",
+      "sources": [
+        {"label": "NK News, 13 Nov 2026", "url": "https://www.nknews.org/2026/11/us-moves-to-disrupt-north-korean-crypto-theft-seize-1-2b-in-binance-funds/"},
+        {"label": "Yonhap, 13 Nov 2026", "url": "https://en.yna.co.kr/view/AEN20261113008800315"},
+        {"label": "NK News, 13 Nov 2026", "url": "https://www.nknews.org/2026/11/north-koreas-top-diplomat-denounces-g7-for-demanding-denuclearization/"},
+        {"label": "Yonhap, 13 Nov 2026", "url": "https://en.yna.co.kr/view/AEN20261113000200315"}
+      ]
+    },
+    {
+      "title": "Nvidia chief's exit over a suspected Chinese spy becomes a three-way narrative contest",
+      "region": "GLOBAL / TECHNOLOGY",
+      "priority": false,
+      "confidence": "LOW",
+      "what_happened": "- Jensen Huang has resigned as Nvidia CEO amid an espionage scandal involving a suspected Chinese intelligence agent. The Diplomat links it to Alice Huang's business dealings. I could not independently verify the details of the allegations.\n- SCMP reports the White House is discussing Commerce Secretary Howard Lutnick's future, and analysts expect tighter US controls on AI chip exports to China.\n- Separately, analysts say US–China AI safety talks are stuck on how to define a \"serious\" incident (SCMP).\n- ABC argues Australians will bear costs through the effect on the AI boom and on superannuation exposure to US tech.",
+      "why_australia": "Tighter chip controls would hit Australian data-centre and AI investment plans built on Nvidia hardware. They also raise the question of whether allies are expected to align their controls with the US. The case is also a reminder of the insider and influence threats ASIO has warned about in Australian tech and research. Combined with this week's Microsoft outage, it highlights how much Australia depends on a few US firms.",
+      "lens_actor": "Beijing, Moscow and Tehran",
+      "state_media_framing": "The three tell different stories. Xinhua treats it as a markets story that \"rattles AI trade\". Global Times first asked \"Today Jensen Huang, tomorrow who?\", casting it as US targeting, then framed it as opening \"a new period\" of chip competition. Neither mentions the alleged Chinese agent. RT asks \"who wanted Huang out\" and runs a \"Chinese honeypot\" angle. Tehran Times calls it an \"export-control scandal\".",
+      "angle": "Beijing's silence on the espionage claim is itself data. Watch whether China raises 'US tech coercion' at APEC, and whether Washington asks allies, Australia included, to tighten chip and cloud controls in return.",
+      "sources": [
+        {"label": "SCMP, 13 Nov 2026", "url": "https://www.scmp.com/news/china/diplomacy/article/3374270/jensen-huangs-departure-may-signal-tighter-us-controls-ai-chip-exports-china"},
+        {"label": "The Diplomat, Nov 2026", "url": "https://thediplomat.com/2026/11/chips-cheats-and-china-the-nvidia-espionage-scandal/"},
+        {"label": "RT, 13 Nov 2026", "url": "https://rt-english.com/news/648799-huang-nvidia-downfall-explainer/"},
+        {"label": "Tehran Times, 13 Nov 2026", "url": "https://www.tehrantimes.com/news/532100/Jensen-Huang-s-exit-leaves-a-much-bigger-story-unexplained"},
+        {"label": "ABC, 14 Nov 2026", "url": "https://www.abc.net.au/news/2026-11-14/how-nvidia-scandal-could-undermine-ai-boom-verrender/107382722"}
+      ]
+    }
+  ],
+  "watch_list": [
+    {"when": "16-17 NOV", "what": "ASEAN, ASEAN–Australia and East Asia summits in Manila. Trump is expected on 17 Nov and will press Pax Silica. Albanese meets Marcos."},
+    {"when": "18-19 NOV", "what": "APEC leaders' meeting in Shenzhen, chaired by Xi. Watch for a Trump–Xi meeting and the proposed China–Russia–US leaders' meeting."},
+    {"when": "AFTER 19 NOV", "what": "Australia–China Annual Leaders' Meeting in Beijing, Albanese with Premier Li. Exact date not yet announced."},
+    {"when": "ONGOING", "what": "Hormuz: further IRGC mine or tanker claims, US blockade of Iranian ports, and whether any state tests Tehran's warning by deploying ships."},
+    {"when": "TBC", "what": "Next round of Ukraine talks with European participation. Watch who Europe picks to represent it and whether the agenda covers territory."},
+    {"when": "ONGOING", "what": "US Congress: Democratic senators threatening a shutdown unless Iran war funding is cut. Results of New Zealand's close election."}
+  ]
+}
