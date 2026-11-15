@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-16",
+  "bluf": [
+    "The IRGC says **two tankers hit mines in the Strait of Hormuz on 15 November and one, a supertanker said to carry over 2 million barrels, sank**. No ship has been named, and UKMTO says it is unclear if its own tanker report is the same incident. Iran also claims a drone strike on a US radar in Bahrain. The war with Iran is still the main risk to Australia's fuel supply.",
+    "In Manila, Albanese witnessed the signing of a **new Australia–Philippines Defence Cooperation Arrangement**. It speeds up how forces work together under the existing visiting forces agreement, and comes with new Australian money for maritime surveillance. Beijing has not yet responded. Its media are focused on APEC in Shenzhen and leave the South China Sea out of their ASEAN coverage.",
+    "**APEC Shenzhen (18–19 Nov) opens a big week of great-power diplomacy.** Moscow says Putin, Xi and Trump will meet there. Kim Jong Un's top aide is in Moscow beforehand, and Pyongyang is attacking Japan's plan for a nuclear 'exception'. Peskov says Russia will use **force** if Europe will not deal."
+  ],
+  "stories": [
+    {
+      "title": "Iran claims a supertanker sank after hitting a mine in Hormuz; nothing independent confirms it",
+      "region": "MIDDLE EAST",
+      "priority": true,
+      "confidence": "LOW",
+      "what_happened": "- 15 Nov: The IRGC Navy said two tankers using \"unauthorised\" routes hit naval mines in the southern Strait of Hormuz. It said one, a supertanker carrying more than 2 million barrels of crude, exploded and sank in the southern Persian Gulf, and the second caught fire. TASS relayed the claim. Neither ship has been named.\n- UKMTO (warning 205-26) passed on a report from Indian shipping authorities of an attack on a tanker in the Gulf. It said the crew were accounted for, damage and environmental impact were unknown, and it was unclear whether this was the incident Iran announced. Mehr reported the UKMTO item as a tanker 'attack' near the strait.\n- As of this morning, CENTCOM had not commented on the 15 Nov claim. It has said previously that the main shipping routes were swept of mines. The IMO said in late October it could not confirm the routes were clear.\n- The IRGC also claims six drones hit a US air-defence radar at Bahrain's Riffa base early on 15 Nov, calling it the \"second phase\" of its response. This is unconfirmed. On 13 Nov, CENTCOM denied a similar Iranian claim, saying it shot down two drones heading for Bahrain with \"no injuries or damage\".\n- Speaker Ghalibaf says Iran will not stay in a state of \"neither war nor peace\". Foreign Minister Araghchi travels to Pakistan for an ECO meeting, then to Oman.\n- Brent reportedly settled near US$95.84 on 13 Nov, down from a late-October peak of about US$118.",
+      "why_australia": "Australia imports almost all of its refined fuel, much of it through Asian refineries that depend on Gulf crude. Each mining claim, confirmed or not, affects insurance, freight and pump prices. A confirmed sinking of a loaded supertanker would also be a major oil spill in waters the US Navy is escorting through. ASEAN leaders meeting in Manila today list the energy shock as a top concern, so the war is shaping Australia's region as well as its fuel costs.",
+      "lens_actor": "Tehran and Moscow",
+      "state_media_framing": "Tehran presents mining as enforcing rules in Iranian-controlled waters. Ships are \"violating\" or \"non-compliant\" and used \"unauthorised routes\", so the blame falls on the ships. Press TV says US escorts have \"ended in failure\". Spokesman Baqaei calls the US blockade \"war crimes\" and \"economic terrorism\" and says Iran \"will not leave any strike unanswered\". Moscow repeats the IRGC's wording without qualification: TASS calls the cargo \"illegal transportation\", and RT carries Baqaei's claim that Washington is trying to \"starve\" Iranians. The opposition outlet Iran International tells a different story: economic collapse, petrol rationing and public anger.",
+      "angle": "Iran's mine claims seem built to scare shippers and insurers, whatever the actual damage. If deterrence works through perception, does it matter whether a tanker really sank? What would Australian fuel-security planning need to assume?",
+      "sources": [
+        {"label": "TASS (Telegram), 15 Nov", "url": "https://t.me/tassagency_en/98740"},
+        {"label": "Mehr, 15 Nov", "url": "https://en.mehrnews.com/news/249418/UKMTO-reports-maritime-incident-near-Strait-of-Hormuz"},
+        {"label": "House of Saud, 15 Nov", "url": "https://houseofsaud.com/iran-supertanker-sank-gulf-nov15/"},
+        {"label": "IRNA, 15 Nov", "url": "https://en.irna.ir/news/86321974/Six-drones-targeted-US-air-defense-radar-at-Bahrain-helicopter"},
+        {"label": "Military.com / AP, 13 Nov", "url": "https://www.military.com/us-military-downs-2-iranian-attack-drones-as-iran-claims-a-strike-on-a-us-radar-in-bahrain"},
+        {"label": "IRNA, 15 Nov", "url": "https://en.irna.ir/news/86321797/Baqaei-US-admits-it-is-committing-war-crimes-economic-terrorism"}
+      ]
+    },
+    {
+      "title": "Australia and the Philippines sign a Defence Cooperation Arrangement as ASEAN meets in Manila",
+      "region": "INDO-PACIFIC",
+      "priority": true,
+      "confidence": "HIGH",
+      "what_happened": "- 15 Nov: Albanese witnessed the signing of an Australia–Philippines Defence Cooperation Arrangement at the Port of Manila, after visiting HMAS Stalwart.\n- Philippine Defence Secretary Gilberto Teodoro called it an \"anti-red tape measure\". It simplifies how the two countries carry out the existing Status of Visiting Forces Agreement: \"Rather than 100 steps to do a single thing, it will just now take 10.\" He said it supports the Philippines' \"credible deterrence posture\", including in the South China Sea.\n- Albanese said it would improve maritime awareness, information sharing, training, interoperability and defence infrastructure. He announced more Australian funding for maritime domain awareness, including drones, equipment and training.\n- The 49th ASEAN Summit is under way in Manila. The ABC lists the energy shock, a digital economy framework, haze from El Niño and Myanmar as the main issues. Manila wanted to finish the South China Sea code of conduct here, but that now looks unlikely. SCMP reports the draft is about 80% complete. Lowy's Hunter Marston told the ABC it is \"not clear\" the code would constrain China.\n- According to Taipei Times, China's foreign and defence ministries did not immediately respond to requests for comment.",
+      "why_australia": "This is the practical side of Australia's growing defence ties in Southeast Asia: faster approvals for ADF deployments, exercises and infrastructure in the country on the front line of South China Sea disputes. It builds on the 2023 strategic partnership and joint patrols. It also comes just before Albanese goes to Shenzhen and, reportedly, Beijing, which tests whether Canberra can deepen deterrence and stabilise ties with China at the same time.",
+      "lens_actor": "Beijing",
+      "state_media_framing": "No statement found yet. Chinese state media have not mentioned the arrangement. CGTN's ASEAN Summit preview listed energy, food security, transnational crime and haze, and left out maritime disputes entirely. Global Times ran an interview with Nauru's President headlined \"We respect and abide by the one-China principle\", which is a Pacific endorsement timed for APEC. Beijing has reacted to similar pacts before by saying defence ties \"should not target any third party\" and accusing Manila of \"courting\" outside powers. Expect that line if a foreign ministry spokesperson is asked.",
+      "angle": "Beijing is staying quiet on the arrangement in the week it hosts APEC and receives Albanese. Is that restraint or just timing? What would a delayed reaction, for example at the sea rather than in words, tell you about how China prioritises?",
+      "sources": [
+        {"label": "Taipei Times, 16 Nov", "url": "https://www.taipeitimes.com/News/front/archives/2026/11/16/2003867806"},
+        {"label": "ABC, 16 Nov", "url": "https://www.abc.net.au/news/2026-11-16/key-issues-on-agenda-at-asean-summit-2026/107384284"},
+        {"label": "Foreign Minister media release, 15 Nov", "url": "https://www.foreignminister.gov.au/minister/penny-wong/media-release/enhancing-defence-cooperation-and-maritime-security-southeast-asia"},
+        {"label": "SCMP, 16 Nov", "url": "https://www.scmp.com/news/china/diplomacy/article/3374495/south-china-sea-code-of-conduct-can-beijing-and-asean-meet-2026-deadline"},
+        {"label": "CGTN, 15 Nov", "url": "https://news.cgtn.com/news/2026-11-15/49th-ASEAN-Summit-kicks-off-in-the-Philippines-1S5hUCI52IU/p.html"}
+      ]
+    },
+    {
+      "title": "Shenzhen APEC week: Beijing sells 'prosperity' while a US–China military crisis pact moves slowly",
+      "region": "INDO-PACIFIC / GLOBAL",
+      "priority": false,
+      "confidence": "MODERATE",
+      "what_happened": "- The APEC CEO Summit (17–18 Nov) and Leaders' Meeting (18–19 Nov) are in Shenzhen. Chinese state media report 12 leaders and 115 Fortune Global 500 firms at the CEO Summit. Vice Premier He Lifeng opened the Business Advisory Council meeting.\n- The Kremlin says a Putin–Xi–Trump meeting will take place in Shenzhen on 19 Nov. Beijing has said only that it is in communication with the parties. Format and agenda remain unclear. Trump has said nuclear arms control and the Iran war could be discussed.\n- 13–14 Nov: the new US–China trade council met for the first time, by video. China's commerce ministry says both sides pledged to stabilise trade ties.\n- SCMP, citing sources, reports that a US–China memorandum on preventing military accidents is moving slowly because of divisions inside the US administration. Ambassador Xie Feng has called for AI cooperation with the US.\n- US Treasury Secretary Bessent says Washington is investigating whether Nvidia chips reached China through shell companies. The ABC reports that an alleged Chinese spy left Megaspeed, the Singapore firm under US scrutiny, last year.\n- SCMP reports Albanese will go from APEC to Beijing. This is not yet officially confirmed.",
+      "why_australia": "Albanese will be in the room while the US, China and Russia negotiate over nuclear arms, Ukraine and Iran, issues where Australia has interests but no seat. A US–China crisis-prevention mechanism would lower the risk of a military accident in waters where the ADF operates. The chip-smuggling case also bears on AUKUS Pillar II export controls and on Southeast Asian hubs as transit points.",
+      "lens_actor": "Beijing",
+      "state_media_framing": "This is a coordinated, upbeat campaign. Global Times calls it \"the Shenzhen moment\". Xinhua presents China as driving \"a more connected, dynamic Asia-Pacific\". CGTN casts Beijing as the champion of \"openness, innovation and cooperation\" and of AI-led growth. Coverage of US–China trade is low-key and not confrontational. The hard edge is in tech: Global Times says US chip curbs \"cannot stymie China's AI progress\". State media have said little about the trilateral, while TASS has promoted it, which suggests Beijing is wary of looking like Moscow's broker.",
+      "angle": "Beijing is staging APEC as proof that it is the region's open economic hub. How should Canberra take part in that story, for example by backing APEC's agenda, without endorsing China's broader claim to regional leadership?",
+      "sources": [
+        {"label": "CGTN, 14 Nov", "url": "https://news.cgtn.com/news/2026-11-14/China-US-pledge-to-stabilize-trade-ties-in-first-council-meeting-1S42eJ7XDc4/p.html"},
+        {"label": "SCMP, 16 Nov", "url": "https://www.scmp.com/news/china/military/article/3374503/us-china-seek-common-ground-military-crisis-pact-washington-weighs-terms-sources"},
+        {"label": "Al Jazeera, 6 Nov", "url": "https://www.aljazeera.com/amp/news/2026/11/6/what-a-trump-xi-putin-summit-would-mean-and-what-it-wouldnt"},
+        {"label": "SCMP (Albanese itinerary)", "url": "https://www.scmp.com/news/china/diplomacy/article/3372671/australian-pm-visit-beijing-after-china-hosted-apec-summit-tensions-simmer"},
+        {"label": "ABC, 16 Nov", "url": "https://www.abc.net.au/news/2026-11-16/alice-huang-megaspeed-departure/107388304"}
+      ]
+    },
+    {
+      "title": "Kremlin threatens force if Europe won't deal, as Russia steps up its war on Black Sea shipping",
+      "region": "EUROPE",
+      "priority": false,
+      "confidence": "MODERATE",
+      "what_happened": "- 15 Nov: Kremlin spokesman Peskov said settlement talks are pointless if Europeans do not want peace. He said Russia will have to reach its goals by force if there is no prospect of agreement with Europe.\n- Lavrov said Russia is holding substantive talks with the US. He said all sides except Zelensky viewed the Abu Dhabi round (10–11 Nov) positively, and that the EU wants to \"jump on the last carriage\". He rejected von der Leyen's call for a ceasefire before talks.\n- TASS quotes US envoy Jared Kushner saying the US wants to help Russia and Europe make direct contact. Peskov says Europe's named negotiators have \"not yet\" contacted Moscow.\n- Russia says it struck Ukrainian ports, ferry terminals and a cargo ship heading for Odesa. The pro-Kremlin channel Rybar claims traffic to Greater Odesa has almost stopped and reports a drone strike on the Palau-flagged Larissa 1 in Romanian waters. That strike is not independently confirmed. It follows Romania blaming Russia for sinking the cargo ship Khoryv off Constanța on 23 Oct.\n- The EU's IRINI operation boarded MV MIDAG, a suspected shadow-fleet tanker. EU foreign ministers are expected to add banks and oil buyers to sanctions today.\n- Ukraine hit the Nizhnekamsk petrochemical complex in Tatarstan, killing at least one person (Moscow Times). Russia claims it downed 533 drones in one night.",
+      "why_australia": "The outcome in Ukraine will shape how deterrence works in the Indo-Pacific. Australia also has its own Russia sanctions and supports Ukraine. Albanese has refused to rule out being photographed with Putin at APEC while saying he stands by Ukraine. That will test how Canberra squares its stance on Ukraine with being in the same room as Putin.",
+      "lens_actor": "Moscow and Beijing",
+      "state_media_framing": "Moscow presents Washington as its real negotiating partner and Europe as a late, divided spoiler that will \"jump on the last carriage\". TASS and RT pair this with stories of European weakness: French protests, calls for Macron to resign, NATO cancelling its 2027 summit, and Polish and Bulgarian aid refusals. Rybar calls the MIDAG boarding \"EU piracy\" and urges a response \"with double force\". Beijing's line differs: Xinhua says the Dublin summits \"advance Europe's role in Ukraine talks\".",
+      "angle": "Moscow is setting things up so that Europe looks like the obstacle to a US-brokered peace. If a deal is struck largely between Washington and Moscow, what lessons will Beijing draw for a Taiwan contingency?",
+      "sources": [
+        {"label": "TASS (Telegram), 15 Nov", "url": "https://t.me/tassagency_en/98735"},
+        {"label": "TASS (Telegram), 15 Nov", "url": "https://t.me/tassagency_en/98733"},
+        {"label": "Rybar (Telegram), 15 Nov", "url": "https://t.me/rybar_in_english/35779"},
+        {"label": "Al Jazeera, 23 Oct", "url": "https://www.aljazeera.com/news/2026/10/23/romania-blames-russia-after-drone-sinks-ship-in-the-black-sea"},
+        {"label": "The Moscow Times, 15 Nov", "url": "https://www.themoscowtimes.com/2026/11/15/at-least-1-killed-as-ukraine-strikes-industrial-sites-across-russia-a94264"}
+      ]
+    },
+    {
+      "title": "Pyongyang sends Kim's top aide to Moscow and attacks Japan's nuclear 'exception' plan",
+      "region": "KOREAN PENINSULA / JAPAN",
+      "priority": false,
+      "confidence": "MODERATE",
+      "what_happened": "- 14 Nov: Jo Yong Won, a Politburo Presidium member and one of Kim Jong Un's closest aides, arrived in Moscow leading a party and government delegation for talks with Dmitry Medvedev. The visit comes days before the Shenzhen summit and follows Kim's recent trip to China.\n- 15 Nov: A KCNA commentary condemned the Takaichi government's reported plan to write an emergency exception to the 'no introduction' rule of Japan's Three Non-Nuclear Principles into security documents due this year. The exception would let nuclear weapons into Japan in an emergency. The Asahi reported on 11 Nov that Tokyo would formally keep all three principles. The stated reason is to avoid blocking port calls by nuclear-armed US ships.\n- Xinhua relayed the KCNA commentary.\n- TASS reports, citing NHK, that upgraded F-15EX fighters have deployed to Kadena on Okinawa, their first deployment outside the US.",
+      "why_australia": "If Japan formally allows US nuclear weapons in during a crisis, that changes extended deterrence in North Asia. This matters to Australia, which relies on the same US nuclear umbrella and is building closer defence ties with Japan. North Korea and Russia deepening their alliance just before great-power talks also raises the question of whether Korean Peninsula issues will be traded away in Shenzhen.",
+      "lens_actor": "Pyongyang and Beijing",
+      "state_media_framing": "KCNA calls Japan's move \"extremely dangerous\". It says it is a prelude to Japanese nuclear weapons and a scheme to become a military giant \"with the help of U.S. nukes\". KCNA vows to defend regional security \"with an absolute superiority of power\". On Russia, KCNA openly calls the relationship an alliance, a \"militant friendship and alliance solidifying day by day\". Beijing relays Pyongyang's line on Japan through Xinhua. Separately it marked the 80th anniversary of the Tokyo Trial, so the two converge on presenting Japan as a threat.",
+      "angle": "China and North Korea both frame Japan's nuclear debate as remilitarisation. How might that framing be used against AUKUS's nuclear-powered submarines, and how should Canberra explain the difference between nuclear propulsion and nuclear weapons to regional audiences?",
+      "sources": [
+        {"label": "NK News, 14 Nov", "url": "https://www.nknews.org/2026/11/kim-jong-uns-top-aide-heads-to-moscow-days-before-putin-xi-trump-summit/"},
+        {"label": "TASS (Telegram), 15 Nov", "url": "https://t.me/tassagency_en/98716"},
+        {"label": "Xinhua, 15 Nov", "url": "https://english.news.cn/asiapacific/20261115/d6b87fc6cf1e48a5b164d018a84d0510/c.html"},
+        {"label": "SBS (Korea), 15 Nov", "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008846394"},
+        {"label": "TASS (Telegram), 16 Nov", "url": "https://t.me/tassagency_en/98738"}
+      ]
+    }
+  ],
+  "watch_list": [
+    {"when": "16 NOV", "what": "EU foreign ministers expected to add banks and oil buyers to Russia sanctions."},
+    {"when": "16–17 NOV", "what": "ASEAN Summit in Manila continues: South China Sea code of conduct, Myanmar junta's attendance ban, energy security. Watch for a Chinese response to the Australia–Philippines arrangement."},
+    {"when": "17–19 NOV", "what": "APEC CEO Summit (17–18) and Leaders' Meeting (18–19) in Shenzhen. Possible Putin–Xi–Trump meeting on 19 Nov. Watch for any Albanese–Xi or Albanese–Trump meetings."},
+    {"when": "AFTER APEC", "what": "Albanese reported to visit Beijing for the Australia–China Annual Leaders' Meeting. Not yet officially confirmed."},
+    {"when": "THIS WEEK", "what": "Araghchi in Pakistan (ECO) then Oman. Watch for any Oman-brokered contact with the US, and for CENTCOM or shipowner confirmation of the 15 Nov Hormuz sinking claim."},
+    {"when": "THIS WEEK", "what": "Jo Yong Won's talks in Moscow. Watch whether Korean Peninsula issues appear in Shenzhen readouts."},
+    {"when": "BY END-2026", "what": "Japan's revised security documents (Three Non-Nuclear Principles exception) and the ASEAN–China code of conduct deadline."}
+  ]
+}
