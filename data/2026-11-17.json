@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-17",
+  "bluf": [
+    "**Xi, Putin and Trump meet in Shenzhen on Thursday 19 November**, the first time the three leaders have met together. Beijing calls it \"groundbreaking\" and presents Xi as the host of great-power peacemaking. Washington says Trump will raise nuclear arms cuts. Australia is not in the room, and any deal on Ukraine, Iran or Korea will be made without it.",
+    "Before that, **Albanese meets Trump, Modi and Takaichi at the Quad tonight in Manila** (about 9.15pm AEDT). Australia has also signed the US-led **San Francisco Declaration** on AI supply chains, two days after its new defence arrangement with the Philippines. Chinese state media have barely mentioned Australia, but Global Times says Canberra simply \"will follow\" Washington.",
+    "**Hormuz is getting worse.** Iran says three more \"violating\" tankers hit mines in 24 hours, while UKMTO describes one incident as an attack by an \"unknown projectile\". Shipping through the strait is still a trickle, and three US carrier groups are now in the region. In Europe, **Estonia will close every border crossing with Russia from 1 December** after what it calls a GRU-ordered sabotage attempt."
+  ],
+  "stories": [
+    {
+      "title": "Xi to host Putin and Trump in Shenzhen on Thursday; Beijing casts itself as convener of great-power peace",
+      "region": "GLOBAL / INDO-PACIFIC",
+      "priority": true,
+      "confidence": "HIGH",
+      "what_happened": "- 16 Nov: China's Foreign Ministry confirmed that Xi Jinping, Vladimir Putin and Donald Trump will meet in Shenzhen on Thursday 19 November, on the sidelines of APEC (18–19 Nov). Spokesperson Mao Ning said it is the first face-to-face meeting of the three heads of state. She said they will exchange views on \"world peace\" and \"strategic stability\" in major-power relations, but gave no agenda.\n- The White House says Trump will raise nuclear arms reduction. China has long refused trilateral arms-control talks, saying the US and Russia should cut first. Reports differ on whether Ukraine is on the agenda: SCMP reports Trump saying he will discuss Ukraine, while other reports say it is not expected to come up.\n- Trump also said \"we may meet with Kim Jong-un\" while in China. No meeting has been announced, and Pyongyang has not responded.\n- The Kremlin says Putin will be in Shenzhen on 18–19 Nov and in Tajikistan on 19–20 Nov, and that the meeting will have a \"major impact\" on world affairs. UN Secretary-General Guterres said the UN is ready to support any denuclearisation effort that comes out of it.",
+      "why_australia": "Three nuclear powers that shape Australia's strategic environment will meet without any US ally present. Any US–China–Russia understanding on Ukraine, Iran, Korea or arms control would be set over Canberra's head. It could also test the core assumption in Australian strategy that Washington stays focused on balancing China. The meeting comes straight after the Quad, so Albanese will be the last allied leader to see Trump before he sits down with Xi and Putin.",
+      "lens_actor": "Beijing and Moscow",
+      "state_media_framing": "Beijing presents the meeting as Xi convening history. Mao Ning called it of \"groundbreaking significance\" and linked it to the three countries' shared wartime \"victory over fascism\". Xinhua and CGTN say Xi \"will hold\" the summit with Putin and Trump, which puts Xi at the centre. Chinese observers quoted by SCMP rule out a \"Yalta 2.0\". The surrounding APEC coverage is all about an \"Asia-Pacific community with a shared future\" and an \"Asia-Pacific miracle\" starting in Shenzhen, with a softer tone towards Washington (for example, stories on searches for lost WWII US airmen). Moscow leads instead with White House confirmation that Trump will meet Putin. The Kremlin promises a \"major impact on global affairs\", and Lavrov says Russia's only allies are its armed forces.",
+      "angle": "Is this a concert of great powers, where big states settle regional questions among themselves, or mostly a stage for Xi's prestige? Track which issues each capital says were discussed afterwards, and whether Beijing frames any result as the great powers managing Korea or Ukraine. That would leave little room for middle powers like Australia.",
+      "sources": [
+        {"label": "Reuters via Yahoo News, 16 Nov 2026", "url": "https://www.yahoo.com/news/world/articles/china-says-xi-putin-trump-074524587.html"},
+        {"label": "CGTN, 16 Nov 2026", "url": "https://news.cgtn.com/news/2026-11-16/Chinese-Russian-US-heads-of-state-to-meet-in-China-s-Shenzhen-on-November-19-1S6WcbHn3qg/p.html"},
+        {"label": "Xinhua Telegram (Mao Ning, translated), 16 Nov 2026", "url": "https://t.me/xhnews/8335"},
+        {"label": "SCMP, 16 Nov 2026 (Trump on Kim)", "url": "https://www.scmp.com/news/us/article/3374640/trump-floats-kim-meeting-china-says-hell-discuss-ukraine-xi-and-putin"},
+        {"label": "The Moscow Times, 16 Nov 2026", "url": "https://www.themoscowtimes.com/2026/11/16/kremlin-says-putin-xi-trump-meeting-in-china-will-have-major-impact-on-global-affairs-a94268"},
+        {"label": "SCMP, 16 Nov 2026 ('No Yalta 2.0')", "url": "https://www.scmp.com/news/china/diplomacy/article/3374622/groundbreaking-no-yalta-20-what-expect-when-xi-putin-and-trump-meet"}
+      ]
+    },
+    {
+      "title": "Quad leaders meet tonight in Manila as Australia signs a US-led AI supply-chain pact and a new Philippines defence deal",
+      "region": "INDO-PACIFIC",
+      "priority": true,
+      "confidence": "HIGH",
+      "what_happened": "- Quad: Albanese, Trump, Modi and Takaichi are due to meet at 6.15pm Manila time on Tuesday 17 Nov (about 9.15pm AEDT). It is the first Quad leaders' meeting since 2024 and the first held in a non-member country. Indian commentary expects New Delhi to prefer principles-based language (UNCLOS, freedom of navigation) over naming China.\n- AI: Australia joined the US-led San Francisco Declaration, a 10-country agreement including Japan, India and the UK, under the Trump administration's Pax Silica initiative. Members will map vulnerable supply chains (critical minerals, energy, data centres, transport), reduce reliance on countries that could disrupt them, and protect sensitive technology. Albanese said, \"We must shape AI rather than let it shape us.\" ABC notes that Singapore and the Philippines are in Pax Silica, while Indonesia, Malaysia, Vietnam and Cambodia back China's rival World AI Congress Organisation.\n- Defence: on 15 Nov, with Albanese watching, Philippine Defence Secretary Teodoro and Ambassador Marc Innes-Brown signed a Defence Cooperation Arrangement. It updates the 1995 framework and gives one mechanism for using the visiting forces agreement. Teodoro: \"Rather than 100 steps... it will just now take 10.\"\n- At the same time, Premier Li Qiang offered ASEAN AI and trade cooperation in Manila. The upgraded China–ASEAN FTA 3.0 takes effect on 1 December.",
+      "why_australia": "This is a week of Australian alignment choices made in public. The AI declaration ties Australia's technology and critical-minerals policy more closely to US export-control strategy, while Southeast Asia is visibly split between US and Chinese AI offers. The Philippines arrangement deepens ADF access next to the South China Sea and fits the informal US–Japan–Australia–Philippines 'Squad'. The Quad shows whether Trump, as a weakened post-midterm president, still invests in the group just before meeting Xi.",
+      "lens_actor": "Beijing",
+      "state_media_framing": "Beijing has kept this low-key. The digests found no Chinese state media comment on the Quad meeting or the AI declaration. Global Times covered the Philippines arrangement through expert Song Zhongping. He said Manila \"cannot contend with China on its own\" and that Canberra \"is likely to follow suit\" when the US deepens its involvement. On the Squad, he said that if Washington puts itself first, others \"pursue their own agendas\". China's Defence Ministry called the Philippines a \"troublemaker and a saboteur of peace\". Meanwhile CGTN ran a series on Tanmen fishing families, a town linked to China's maritime militia, calling the South China Sea \"home\". Xinhua's only Australia item was a Chinese-song contest in Adelaide. In May, China criticised the Quad's maritime initiative as an exclusive \"small circle\", so expect that line if tonight's statement is sharp.",
+      "angle": "Beijing is staying quiet on Australia while courting Trump. Is it choosing to downplay the Quad and Squad so it doesn't spoil Shenzhen? And does Song's 'Canberra follows Washington' framing show Beijing sees Australia as a follower rather than a separate actor worth pressuring?",
+      "sources": [
+        {"label": "ABC News, 17 Nov 2026", "url": "https://www.abc.net.au/news/2026-11-17/australia-signs-us-led-ai-supply-chain-agreement/107392252"},
+        {"label": "Global Times, 15 Nov 2026", "url": "https://www.globaltimes.cn/page/202611/1374317.shtml"},
+        {"label": "Philstar, 16 Nov 2026", "url": "https://www.philstar.com/headlines/2026/11/16/2570387/philippines-australia-forge-updated-defense-cooperation"},
+        {"label": "The Federal, 16 Nov 2026", "url": "https://thefederal.com/category/news/quad-returns-to-leaders-table-modi-trump-albanese-takaichi-to-meet-on-nov-17-263038"},
+        {"label": "ASPI Strategist, Nov 2026", "url": "https://www.aspistrategist.org.au/just-by-meeting-quad-leaders-send-a-signal-to-beijing/"},
+        {"label": "CGTN, 16 Nov 2026 (Tanmen series)", "url": "https://news.cgtn.com/news/2026-11-16/The-Sea-We-Call-Home-Part-Five-Waiting-for-the-Boats-to-Return-1S6c7VyNVZu/p.html"}
+      ]
+    },
+    {
+      "title": "Iran claims more tanker mine strikes in Hormuz; UKMTO reports a projectile attack instead",
+      "region": "MIDDLE EAST",
+      "priority": false,
+      "confidence": "MODERATE",
+      "what_happened": "- 15–16 Nov: The IRGC Navy says two tankers exploded after hitting mines on a \"prohibited and unsafe\" southern route. Iran's regular Navy says a third \"violating\" tanker hit mines east of the strait, the third in 24 hours. The IRGC's running total is six tankers on fire over two days, and IRNA says five. No vessel, flag state, owner or insurer has confirmed any of these.\n- UKMTO warning 207-26 (16 Nov) reported a tanker leaving the strait hit by an \"unknown projectile\", with an engine-room fire and no casualties. It did not call it a mine strike. A maritime monitor named the ship as the Panama-flagged ON PHOENIX, which is unconfirmed.\n- As of Monday CENTCOM had not commented. USS Theodore Roosevelt has arrived, giving the US three carrier groups in the region to enforce the blockade of Iranian ports. Daily transits are in single or low double digits, against about 138 before the crisis.\n- President Pezeshkian says Iran \"remains in a state of war\" and has ordered the highest readiness. The IRGC claims it captured a fourth US MQM-170 drone. FM Araghchi was in Islamabad, where Mehr says ECO ministers backed Iran's peace initiative. Iran also says it trusts Pakistan to broker talks with Washington.\n- Yemen front: the Houthis claim missile strikes on Riyadh and the East-West pipeline, and advances near Bab el-Mandeb. These are unverified.",
+      "why_australia": "Australia imports most of its refined fuel from Asian refineries that rely on Gulf crude, so a long closure of Hormuz feeds into prices at the bowser and the fuel-security debate. If the Houthis threaten Bab el-Mandeb, the Red Sea route is at risk too. A third US carrier in CENTCOM means fewer US naval assets in the Indo-Pacific, during a week when the Quad and the Squad are meant to signal US presence.",
+      "lens_actor": "Tehran",
+      "state_media_framing": "Tehran makes Iran's own closure the legal baseline and blames the ships. IRNA and Mehr call them \"violating\" or \"non-compliant\" tankers using a \"US-devised route\". Press TV says Iran keeps \"control\" of the strait. Deputy FM Gharibabadi says Iran is ready for diplomacy, \"economic blockade\" or military confrontation. Araghchi warned War Secretary Hegseth by pointing to a Roman general's \"crushing defeat\". Spokesperson Baghaei insists Iran \"does not target civilians\". Beijing reports the incidents neutrally as \"tensions\". Russia's MFA, after Lavrov's call with Araghchi, repeats \"unprovoked US and Israeli aggression\".",
+      "angle": "Iran claims the mine strikes while UKMTO reports a projectile. Is Tehran inflating 'mine' claims to deter shipping more cheaply than actually laying mines? How should analysts weigh state claims when independent maritime reporting is this thin?",
+      "sources": [
+        {"label": "IRNA, 17 Nov 2026", "url": "https://en.irna.ir/news/86323643/Third-violating-oil-tanker-explodes-in-Hormuz-in-24-hours-Iran-s"},
+        {"label": "House of Saud (UKMTO summary), 16 Nov 2026", "url": "https://houseofsaud.com/iran-tankers-mines-hormuz-ukmto-nov16/"},
+        {"label": "Tehran Times, 16 Nov 2026", "url": "https://www.tehrantimes.com/news/532228/Iran-remains-in-a-state-of-war-President-Pezeshkian-says"},
+        {"label": "IRNA, 16 Nov 2026 (Gharibabadi)", "url": "https://en.irna.ir/news/86322858/Iran-ready-for-diplomacy-economic-blockade-and-military-confrontation"},
+        {"label": "IRNA, 16 Nov 2026 (Araghchi on Hegseth)", "url": "https://en.irna.ir/news/86323006/Araghchi-warns-US-war-chief-against-repeating-history"},
+        {"label": "Russian MFA Telegram, 16 Nov 2026", "url": "https://t.me/MFARussia/33368"}
+      ]
+    },
+    {
+      "title": "Estonia will shut its whole border with Russia from 1 December after a GRU-linked sabotage attempt",
+      "region": "EUROPE",
+      "priority": false,
+      "confidence": "HIGH",
+      "what_happened": "- On the night of 14 Nov, attackers tried to cause an explosion and fire at Threod Systems, a Tallinn drone maker whose reconnaissance drones are used by Ukraine. No one was hurt and production was unaffected. Eight suspects have been detained.\n- PM Kristen Michal called it \"GRU-ordered\" and part of Russia's hybrid war against Europe, saying Estonia \"will not be intimidated\". The Foreign Ministry says all Estonia–Russia border crossings close from 1 December.\n- It follows an arson attack on another Estonian defence firm, Milrem Robotics, in August, which Tallinn also attributed to Russia. Meduza reports Estonia is also preparing to move government services to the cloud in case of invasion.\n- Context: NATO has cancelled its 2027 leaders' summit in Tirana (RT, citing Albanian PM Rama). EU leaders also refused to let Kallas lead any EU negotiations with Russia (TASS, unverified).",
+      "why_australia": "Australia supplies Ukraine and sanctions Russian intelligence actors. Sabotage against defence makers that supply Ukraine is the European version of the foreign-interference and critical-infrastructure risks ASIO warns about here. Allied responses, such as attribution, arrests and border closures, set precedents for how democracies push back on hybrid attacks below the threshold of war.",
+      "lens_actor": "Moscow (with Beijing amplifying)",
+      "state_media_framing": "Moscow treats the closure as irrational hostility and ignores the sabotage allegation. Zakharova called it \"radical and unrestrained Russophobia\" and said Moscow would \"check\" the reports. Peskov said walls between nations \"proved to be a losing proposition\". TASS stresses lost jobs in Narva and mocks Tallinn's warning of a \"migration attack\". It fits a wider TASS/RT 'Western disunity' line (Kallas sidelined, NATO summit cancelled). Xinhua's Chinese-language channel repeated Zakharova's \"Russophobia\" framing almost word for word.",
+      "angle": "Is a full land-border closure an effective answer to sabotage run through recruited proxies, or mainly a political signal? Look also at Beijing repeating Moscow's lines on European security without comment. What does that suggest about China's claim to neutrality on Russia–Europe tensions?",
+      "sources": [
+        {"label": "Breaking Defense, 16 Nov 2026", "url": "https://breakingdefense.com/2026/11/estonian-drone-company-targeted-in-sabotage-attempt-as-part-of-russias-hybrid-war-against-europe-prime-minister-michal/"},
+        {"label": "Meduza, 16 Nov 2026", "url": "https://meduza.io/en/feature/2026/11/16/estonia-is-closing-its-border-with-russia-after-an-alleged-sabotage-attempt-and-preparing-to-move-government-services-to-the-cloud-in-case-of-invasion"},
+        {"label": "RT, 16 Nov 2026 (Peskov)", "url": "https://rt-english.com/news/648915-kremlin-responds-baltic-state-closing-border-russia/"},
+        {"label": "TASS, 16 Nov 2026", "url": "https://t.me/tassagency_en/98847"},
+        {"label": "Xinhua Telegram, 16 Nov 2026", "url": "https://t.me/xhnews/8334"}
+      ]
+    },
+    {
+      "title": "Ukraine hits the Crimean Bridge as Moscow pushes to keep Europe out of peace talks",
+      "region": "EUROPE",
+      "priority": false,
+      "confidence": "MODERATE",
+      "what_happened": "- 16 Nov: Crimea's Russian-installed head Aksyonov said Ukrainian forces struck the Crimean Bridge, and traffic was restricted until midday. Moscow called the damage \"insignificant\". OSINT analysts cited by Meduza say the main road span is visibly deformed. Independent damage assessment is not yet available.\n- Russia's Defence Ministry claims it shot down 1,336 Ukrainian drones overnight on 15–16 Nov, including waves aimed at Moscow. This is unverified, but if accurate it would be one of the largest drone attacks of the war.\n- Kremlin aide Ushakov says the next round of talks will be US–Russia–Ukraine only, with no Europeans. Lavrov said Europeans \"hung on Trump's arms\" after Anchorage. Von der Leyen says Europe wants a role.\n- The Moscow Times reports the Kremlin told United Russia lawmakers to prepare for \"victory\" and for veterans coming home all at once.",
+      "why_australia": "Australia has staked diplomatic and material support on Ukraine's sovereignty. A settlement negotiated by Washington and Moscow without Europe, possibly prepared in Shenzhen, would test whether 'no deal about Ukraine without Ukraine' still holds. Beijing would read that outcome as a precedent for great-power deals over the heads of smaller states, including in Asia.",
+      "lens_actor": "Moscow",
+      "state_media_framing": "Moscow casts Europe as the spoiler and the US channel as the only real one. TASS amplified US analyst Ted Snider's claim that Russia \"has, in fact, won\" and UnHerd's view that Ukraine faces a dead end. Lavrov says Russia's only allies are its \"army and navy\" plus its aerospace and nuclear forces. On the bridge, officials played down the damage. TASS and the MoD stress record drone kills and Russian gains (Shilovka, Kotovka), and MFA channels push atrocity claims against Ukrainian forces. Xinhua relayed the MoD drone figure and the bridge attack with little added context.",
+      "angle": "Why does Moscow lean on outside validators (Western analysts) rather than official claims to argue that Russia has won? What does that say about which audience it is targeting before Shenzhen, Washington or Europe?",
+      "sources": [
+        {"label": "Meduza, 16 Nov 2026 (bridge damage)", "url": "https://meduza.io/en/news/2026/11/16/after-ukraine-s-latest-attack-moscow-calls-damage-to-the-crimean-bridge-insignificant-but-osint-analysts-say-its-main-road-span-is-visibly-deformed"},
+        {"label": "TASS, 16 Nov 2026 (drone claim)", "url": "https://t.me/tassagency_en/98784"},
+        {"label": "Meduza, 16 Nov 2026 (Ushakov)", "url": "https://meduza.io/en/news/2026/11/16/kremlin-says-the-next-u-s-russia-ukraine-peace-talks-will-be-trilateral-without-europe"},
+        {"label": "TASS, 16 Nov 2026 (Lavrov)", "url": "https://t.me/tassagency_en/98837"},
+        {"label": "TASS, 16 Nov 2026 (Snider)", "url": "https://t.me/tassagency_en/98776"},
+        {"label": "The Moscow Times, 16 Nov 2026", "url": "https://www.themoscowtimes.com/2026/11/16/kremlin-tells-united-russia-lawmakers-to-prepare-for-victory-in-ukraine-a94270"}
+      ]
+    },
+    {
+      "title": "Pyongyang stays quiet as Trump floats a Kim meeting and a top Kim aide visits Russia",
+      "region": "KOREAN PENINSULA",
+      "priority": false,
+      "confidence": "LOW",
+      "what_happened": "- Trump says \"we may meet with Kim Jong-un\" while in China for APEC. Nothing has been scheduled, and there has been no KCNA response.\n- Senior Workers' Party official Jo Yong-won went to Russia on 15 Nov, after Kim's recent China visit. Seoul's unification ministry says it is watching the trip closely before Shenzhen.\n- On 15 Nov, a North Korean commentary condemned Japan for considering an \"exception\" to its Three Non-Nuclear Principles, calling it a prelude to Japanese nuclear ambitions. CGTN carried it prominently.\n- South Korea's FM Cho Hyun asked Wang Yi to help bring Pyongyang back to talks. NK News reports that Seoul's demand for an apology over DMZ mines derailed UN Command talks with the North Korean military.\n- Yonhap's experts expect the nuclear issue to get little attention at the trilateral.",
+      "why_australia": "A Trump–Kim meeting arranged in China would put Beijing at the centre of Korean diplomacy and could sideline Seoul and Tokyo, two of Australia's closest regional partners. Japan's review of its non-nuclear principles is directly relevant to Australia's own nuclear-deterrence debate and to AUKUS non-proliferation arguments.",
+      "lens_actor": "Pyongyang and Beijing",
+      "state_media_framing": "We found no KCNA statement on Trump's offer or the Shenzhen summit. Pyongyang's only notable line this period attacked Japan, calling its nuclear-policy review a step towards Japanese nuclear weapons. Beijing amplified it: CGTN ran the commentary on the same day as a Japanese civic group's warning about the war risks of Tokyo's military build-up. Together they push a 'remilitarising Japan' story.",
+      "angle": "Pyongyang is silent on Trump while attacking Tokyo. Is it holding out for terms, perhaps coordinated with Moscow through Jo Yong-won's visit? And do China and North Korea gain from making Japan, rather than North Korea, the region's nuclear 'problem'?",
+      "sources": [
+        {"label": "SCMP, 16 Nov 2026", "url": "https://www.scmp.com/news/us/article/3374640/trump-floats-kim-meeting-china-says-hell-discuss-ukraine-xi-and-putin"},
+        {"label": "Yonhap, 16 Nov 2026", "url": "https://en.yna.co.kr/view/AEN20261116004500315"},
+        {"label": "CGTN, 16 Nov 2026", "url": "https://news.cgtn.com/news/2026-11-16/DPRK-slams-Japan-s-proposed-exception-to-Three-Non-Nuclear-Principles-1S6Qkmr4Q1y/p.html"},
+        {"label": "NK News, Nov 2026", "url": "https://www.nknews.org/2026/11/seouls-demand-for-mine-apology-derailed-push-for-north-korea-talks-sources/"}
+      ]
+    }
+  ],
+  "watch_list": [
+    {"when": "17 NOV (EVENING)", "what": "Quad leaders' meeting in Manila (Albanese, Trump, Modi, Takaichi). Watch the joint statement's wording on the South China Sea and China, and Beijing's response."},
+    {"when": "17 NOV", "what": "East Asia Summit in Manila. Lavrov leads Russia's delegation."},
+    {"when": "18-19 NOV", "what": "APEC Economic Leaders' Meeting in Shenzhen."},
+    {"when": "19 NOV", "what": "Xi–Putin–Trump trilateral in Shenzhen. Watch for a possible Trump–Kim meeting (unconfirmed)."},
+    {"when": "19-20 NOV", "what": "Putin visits Tajikistan."},
+    {"when": "1 DEC", "what": "Estonia closes all border crossings with Russia. The China–ASEAN FTA 3.0 takes effect."},
+    {"when": "ONGOING", "what": "Hormuz mine and tanker claims, the US blockade of Iranian ports (three carrier groups), Houthi advances towards Bab el-Mandeb, and Pakistan's mediation between Iran and the US."}
+  ]
+}
